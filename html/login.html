@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Product</title>
-	<!-- css -->
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <!-- css -->
 	<link rel="stylesheet" href="css/style.css">
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
-	<!-- Navbar starts here -->
+<body id="loginbody">
+   <!-- Navbar starts here -->
 	<nav>
 		<div class="nav-padding">
 			<ul>
@@ -23,23 +23,16 @@
 				<li><a href="#jobs"><p>Apply For Jobs</p></a></li>
 			</ul>
 		</div>
-	</nav>
-	<div class="container">
-		<div class="game1">
+	</nav> 
+	<div class="card"> 
+	   <form name="login_form" method="POST">
+	   	<label>Username: </label><input type="text" name="username" required>
+	   	<br>
+	   	<label>Password: </label><input type="password" name="password" placeholder="8 digit password" minlength="8" required>
+	   	<h5><a href="register.html" style="margin: 4vw; padding: 3vw;">Forgot password?</a><span style="margin: 4vw; padding: 3vw;"><input type="submit" value="Log in"></span></h5>
+	   	<h5>OR YOU CAN <a href="register.html">REGISTER</a> WITH US!</h5>
+	   </form>
 
-		</div>
-		<div class="game2">
-
-		</div>
 	</div>
-	<footer>
-		<div class="container2">
-			<div class="box1"><h3 class="featured">FEATURED IN</h3></div>
-			<div class="container3"> 
-				<div class="box2"><p>details about game</p></div>
-				<div class="box3"><p>details about game</p></div>
-				<div class="box4"><p>details about game</p></div>
-				
-	</footer>
 </body>
 </html>

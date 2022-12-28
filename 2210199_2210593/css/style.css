@@ -1,0 +1,130 @@
+h1,h2,h3,h4,h5,h6,a,ul,li,p,label{
+  color: black;
+  font-family: 'Dosis', sans-serif;
+  font-size: 15px;
+}
+
+/*Navbar*/
+nav{
+  margin: 0;
+  padding: 0;
+  
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #8b46fc;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+
+.logo{
+  float: left;
+  display: inline-block;
+
+}
+
+.aboutUs{
+  margin-left: 45vw;
+}
+
+li a:hover {
+  background-color: #92F2E3;
+}
+
+p:hover {
+  color: #963484;
+
+}
+
+/*HOMEPAGE STYLES*/
+/*body*/
+body{
+  
+  background-image: fill;
+  margin: 0 !important;
+
+}
+.container{
+  display:flex;
+}
+
+/*images*/
+
+/*footer*/
+.feature{
+  text-align: center;
+}
+.container2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container3{
+  display: inline-flex;
+}
+/*LOGIN STYLE*/
+
+/*glassmorphism css*/
+
+.container4 {
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+}
+
+form {
+  padding: 3em;
+  height: 320px;
+  border-radius: 20px;
+  border-left: 1px solid rgba(255,255,255,0.3);
+  border-top: 1px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  }
+  .welcome {
+    font-weight: 500;
+    color: #fff;
+    opacity: 0.7;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 60px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  .forgetpass {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 12px;
+    
+  }
+  
+  input {
+    background: transparent;
+    width: 200px;
+    padding: 1em;
+    margin-bottom: 2em;
+    border: none;
+    border-left: 1px solid $white;
+    border-top: 1px solid $white;
+    border-radius: 5000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px 
+  }

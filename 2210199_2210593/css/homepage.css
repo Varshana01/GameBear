@@ -7,6 +7,17 @@
   width: 1263px; 
   height: 650px;
 }
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+#spacechesspic{
+  width: 800px;
+
+}
+
 /*footer*/
 .feature{
   text-align: center;

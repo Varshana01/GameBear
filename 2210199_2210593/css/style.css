@@ -11,15 +11,13 @@ nav{
   padding: 0;
   position: sticky;
   top: 0;
-
-
 }
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #8b46fc;
+  background-color: #DE9FF3;
   position: sticky;
   top: 0;
 
@@ -66,10 +64,10 @@ body{
   margin: 0 !important;
 
 }
-.container{
-  display:flex;
+.container {
+    display: flex;
+    justify-content: center;
 }
-
 /*images*/
 
 

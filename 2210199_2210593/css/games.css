@@ -1,0 +1,24 @@
+#gamebody{
+	margin: 5px;
+	padding: 5px;
+	transition: all 0.2s ease-in-out;
+}
+#gametitle{
+	margin: 5px;
+	padding: 15px 15px 0 15px;
+	border-bottom: 2px solid black;
+	width: 20%;
+}
+
+#spacechesspic{
+  	width: 600px;
+  	margin: 20 vw;
+  	padding: 3vw 1vw 3vw 1vw;
+}
+
+.fa-brands{
+	font-size: 30px;
+	color: black;
+	background-color: none;
+	margin-left: 3vh;
+}

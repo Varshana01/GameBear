@@ -8,7 +8,7 @@
 #homapagelogopic{
   margin: 0;
   padding: 0;
-  position: relative;
+  position: inherit;
   width: 1263px; 
   height: 550px;
 }

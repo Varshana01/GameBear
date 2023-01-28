@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
+.container {
+    display: flex;
+    justify-content: center;
+}
+
 #homapagelogopic{
   margin: 0;
   padding: 0;
   position: relative;
   width: 1263px; 
-  height: 650px;
+  height: 550px;
 }
 
 .container {

@@ -11,11 +11,11 @@
 	<link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
 	<style type="text/css">
 		body, #loginbody{
-			background-image: url("C:/Users/Varshana/Documents/DGT1032Y/Y1S1/Coursework/2210199_2210593/Images/backgroundImg.jpg");
+			background-image: url("C:/Users/Varshana/Documents/DGT1032Y/Y1S1/Coursework/2210199_2210593/Images/backgroundimage.png");
 			height: 100vh;
 		}
-		a :hover {
-  			color: #963484;
+		#SignIn:hover,a:hover {
+  			color: #42a87e;
   		}
 	</style>
 </head>
@@ -25,12 +25,12 @@
 		<div class="nav-padding">
 			<ul>
 				<li><a href="file:///C:/Users/Varshana/Documents/DGT1032Y/Y1S1/Coursework/2210199_2210593/index.html"><img class="logo" src="C:/Users/Varshana/Documents/DGT1032Y/Y1S1/Coursework/2210199_2210593/Images/icon4Nav.png" width="60"></a></li>
-				<li class="navButton"><a href="#about" class="aboutUs"><p>About us</p></a></li>
+				<li class="aboutUs"><a href="#about" class="navButton"><p>About us</p></a></li>
 				<li><a href="#store" class="navButton"><p>Store</p></a></li>
 				<li><a href="contact.html" class="navButton"><p>Contact us</p></a></li>
 				<li><a href="login.html" class="navButton"><p>Login</p></a></li>
-				<li><a href="#jobs" class="navButton"><p>Apply For Jobs</p></a></li>
-				<li><a href="#Acknoledgement" class="navButton"><p>Acknoledgement Section</p></a></li>
+				<li><a href="#jobs" class="navButton" ><p>Apply For Jobs</p></a></li>
+				<li><a href="#jobs" class="navButton" ><p>Acknoledgement Section</p></a></li>
 			</ul>
 		</div>
 	</nav> 
@@ -38,11 +38,13 @@
 <body >
 	<div id="loginbody">
 		<div class="container4">
-		  <form method="POST">
+		  <form method="POST" action="#" name="login">
 			   <h6 class="welcome">Welcome</h6>
 			   <input type="email" name="Email" placeholder="Email" required><br>
 			   <input type="password" name="Password" placeholder="Password" required><br>
-			   <a href="C:\Users\Varshana\Documents\DGT1032Y\Y1S1\Coursework\2210199_2210593\index.html"><input type="button" value="Sign in"></a><br>
+			   <a href="C:\Users\Varshana\Documents\DGT1032Y\Y1S1\Coursework\2210199_2210593\index.html">
+			   	<input type="submit" id="SignIn" value="Sign in">
+			   </a><br>
 			   <a class="forgetpass" href="#">Forgot Password?</a>
 			   <br>
     			<h6 class="welcome"> Or you can <a class="forgetpass" href="register.html">REGISTER</a> with us!</h6>

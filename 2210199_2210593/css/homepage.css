@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 .container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column
 }
 
 #homapagelogopic{
@@ -20,6 +21,15 @@
 
 #spacechesspic{
   width: 800px;
+
+}
+
+#squidusgame{
+  width: 800px;
+}
+
+#C4tsgame{
+  width:800px;
 
 }
 

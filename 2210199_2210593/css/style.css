@@ -44,7 +44,7 @@ li a {
 }
 
 .aboutUs{
-  margin-left: 45vw;
+  margin-left: 60vw;
 }
 
 li .navButton:hover {
@@ -109,5 +109,11 @@ input,.options{
   border-radius: 5000px;
   backdrop-filter: blur(5px);
   box-shadow: 4px 4px 20px 3px; 
+}
+
+#rememberMe{
+  width: 15 px; 
+  padding: 0;
+  margin: 0;
 }
 /*CONTACT US PAGE*/

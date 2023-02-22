@@ -10,13 +10,13 @@
   margin: 0;
   padding: 0;
   position: inherit;
-  width: 1263px; 
-  height: 550px;
+  width: 1519px; 
+  height: 650px;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
 #spacechesspic{

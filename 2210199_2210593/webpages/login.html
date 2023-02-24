@@ -2,16 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login | GamerBear</title>
+    <title>Login  |GamerBear</title>
+    <!-- tab img -->
+	<link rel = "icon" href ="../Images/icon4Nav.png" type = "image/x-icon">
     <!-- css -->
-	<link rel="stylesheet" href="C:/Users/ty/Documents/Nidhi/Web/Tutorials/GameBear-main/2210199_2210593/css/style.css">
+	<link rel="stylesheet" href="../css/style.css">
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+	<!-- Icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 	<style type="text/css">
 		body, #loginbody{
-			background-image: url("C:/Users/ty/Documents/Nidhi/Web/Tutorials/GameBear-main/2210199_2210593/Images/backgroundimage.png");
+			background-image: url("../Images/backgroundimage.png");
 			height: 100vh;
 		}
 		#SignIn:hover,a:hover {
@@ -24,7 +28,7 @@
 	<nav>
 		<div class="nav-padding">
 			<ul>
-				<li><a href="index.html"><img class="logo" src="C:/Users/ty/Documents/Nidhi/Web/Tutorials/GameBear-main/2210199_2210593/Images/icon4Nav.png" width="60"></a></li>
+				<li><a href="index.html"><img class="logo" src="../Images/icon4Nav.png" width="60"></a></li>
 				<li class="aboutUs"><a href="#about" class="navButton"><p>About us</p></a></li>
 				<li><a href="store.html" class="navButton"><p>Store</p></a></li>
 				<li><a href="contact.html" class="navButton"><p>Contact us</p></a></li>
@@ -39,8 +43,14 @@
 		<div class="container4">
 		  <form method="POST" action="#" name="login">
 			   <h6 class="welcome">Welcome</h6>
-			   <input type="email" name="Email" placeholder="Email" required><br>
-			   <input type="password" name="Password" placeholder="Password" required><br>
+			   <div class="inputBox">
+            	<span class="fa-regular fa-envelope"></span>
+            	<input type="email" name="Email" placeholder="Email" class="inputFrm" required><br>
+        		</div>
+        		<div class="inputBox">
+        			<span class="fa-solid fa-lock"></span>
+			  		<input type="password" name="Password" placeholder="Password" class="inputFrm" required><br>
+        		</div>
 			   <a href="index.html">
 			   	<input type="submit" id="SignIn" value="Sign in">
 			   </a>

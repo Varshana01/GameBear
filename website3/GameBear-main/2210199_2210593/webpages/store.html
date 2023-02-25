@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Store | GamerBear</title>
+
+    <!-- css -->
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/store.css">
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+	<style type="text/css">
+		body, #storebody{
+			background-image: url("../Images/backgroundimage.png");
+			height: 100vh;
+
+		}
+
+
+	</style>
+</head>
+<header>
+   <!-- Navbar starts here -->
+	<nav>
+		<div class="nav-padding">
+			<ul class="nav-ul">
+				<li class="nav-li"><a href="../index.html"><img class="logo" src="../Images/icon4Nav.png" width="60"></a></li>
+				<li class="nav-li aboutUs"><a href="../webpages/aboutus.html" class="navButton"><p>About us</p></a></li>
+				<li class="nav-li"><a href="../webpages/store.html" class="navButton"><p>Store</p></a></li>
+				<li class="nav-li"><a href="../webpages/contact.html" class="navButton"><p>Contact us</p></a></li>
+				<li class="nav-li" ><a href="../webpages/login.html" class="navButton"><p>Login</p></a></li>
+				<li class="nav-li"><a href="../webpages/reference.html" class="navButton" ><p>Acknoledgement Section</p></a></li>
+			</ul>
+		</div>
+	</nav> 
+</header>
+<body >
+	<div id="storebody">
+		<!-- products section starts  -->
+
+		<section id="products">
+		   <div class="box-container" class="shop-items">
+
+		      <div class="box" class="shop-item">
+		         <div class="image">
+		       		<div class="icons">
+		            </div>
+		            	<img src="../Images/boyHoodie.png" alt="boyHoodie" class="images" style="height: 45vh; width: 20vw;">
+		            </div>
+		         	<div class="content">
+		               <h3 class="title">Item #00101</h3>
+		               <div class="stars">
+		            	   <i class="fas fa-star"></i>
+		                  <i class="fas fa-star"></i>
+		                  <i class="fas fa-star"></i>
+		                  <i class="fas fa-star"></i>
+		                  <i class="fas fa-star-half-alt"></i>
+		               </div>
+		               <div class="price"><p class="contentText">$15.00 </p></div><span>was $25.00</span>
+		               <button onclick="addToCartClicked(0)" class="btn btn-primary shop-item-button" type="button"><a class="fas fa-shopping-cart"></a></button>
+
+		            </div>
+		        </div>
+
+		        <div class="box" class="shop-item">
+		            <div class="image">
+		                <div class="icons">
+		                </div>
+		                <img src="../Images/case1.png" alt="case1" class="images">
+		            </div>
+		            <div class="content">
+		                <h3 class="title">Item #00102</h3>
+		                <div class="stars">
+		                    <i class="fas fa-star"></i>
+		                    <i class="fas fa-star"></i>
+		                    <i class="fas fa-star"></i>
+		                    <i class="fas fa-star-half-alt"></i>
+		                </div>
+		                <div class="price"><p class="contentText">$35.00</p> </div><span>was $40.00</span>
+		        			<button onclick="addToCartClicked(1)" class="btn btn-primary shop-item-button" type="button"><a class="fas fa-shopping-cart"></a></button>		                
+		            </div>
+		        </div>
+
+		        <div class="box" class="shop-item">
+		            <div class="image">
+		                <div class="icons">
+		                </div>
+		                <img src="../Images/case2.png" alt="" class="images">
+		            </div>
+		            <div class="content">
+		               <h3 class="title">Item #00103</h3>
+		               <div class="stars">
+		                  <i class="fas fa-star"></i>
+		                  <i class="fas fa-star"></i>
+		                  <i class="fas fa-star"></i>
+		                  <i class="fas fa-star"></i>
+		                  <i class="fas fa-star"></i>
+		               </div>
+		               <div class="price"><p class="contentText">$20.00</p> </div><span>was $25.00</span>
+							<button onclick="addToCartClicked(2)" class="btn btn-primary shop-item-button" type="button"><a class="fas fa-shopping-cart"></a></button>
+
+		            </div>
+		        </div>
+
+		        <div class="box" class="shop-item">
+		            <div class="image">
+		                <div class="icons">
+		                </div>
+		                <img src="../Images/girlShirt.png" alt="girlShirt" class="images" style="height: 45vh; width: 20vw;">
+		            </div>
+		            <div class="content">
+		               <h3 class="title">Item #00104</h3>
+		               <div class="stars">
+		                  <i class="fas fa-star"></i>
+		                  <i class="fas fa-star"></i>
+		                  <i class="fas fa-star"></i>
+		                  <i class="fas fa-star"></i>
+		                  <i class="fas fa-star-half-alt"></i>
+		               </div>
+		               <div class="price"><p class="contentText">$50.00</p> </div><span>was $60.00</span>
+		               <button onclick="addToCartClicked(3)" class="btn btn-primary shop-item-button" type="button"><a class="fas fa-shopping-cart"></a></button>
+		            </div>
+		        </div>
+
+		        <div class="box" class="shop-item">
+		            <div class="image">
+		                <div class="icons">
+		                </div>
+		                <img src="../Images/mask.png" alt="mask" class="images">
+		            </div>
+		            <div class="content">
+		               <h3 class="title">Item #00105</h3>
+		               <div class="stars">
+		                  <i class="fas fa-star"></i>
+		                  <i class="fas fa-star"></i>
+		                  <i class="fas fa-star"></i>
+		                  <i class="fas fa-star"></i>
+		                  <i class="fas fa-star"></i>
+		               </div>
+		               <div class="price"><p class="contentText">$20.00</p> </div><span>was $25.00</span>
+							<button onclick="addToCartClicked(4)" class="btn btn-primary shop-item-button" type="button"><a class="fas fa-shopping-cart"></a></button>
+
+		            </div>
+		        </div>
+
+		        <div class="box" class="shop-item">
+		            <div class="image">
+		                <div class="icons">
+		                </div>
+		                <img src="../Images/mug.png" alt="mug" class="images">
+		            </div>
+		            <div class="content">
+		                <h3 class="title">Item #00106</h3>
+		                <div class="stars">
+		                    <i class="fas fa-star"></i>
+		                    <i class="fas fa-star"></i>
+		                    <i class="fas fa-star"></i>
+		                    <i class="fas fa-star"></i>
+		                    <i class="fas fa-star-half-alt"></i>
+		                </div>
+		                <div class="price"><p class="contentText">$20.00</p> </div><span>was $25.00</span>
+	                    <button onclick="addToCartClicked(5)" class="btn btn-primary shop-item-button" type="button"><a class="fas fa-shopping-cart"></a></button>
+		            </div>
+		        </div>
+
+		        <div class="box" class="shop-item">
+		            <div class="image">
+		                <div class="icons">
+		                </div>
+		                <img src="../Images/sticker.png" alt="sticker" class="images" style="height: 40vh;">
+		            </div>
+		            <div class="content">
+		                <h3 class="title">Item #00107</h3>
+		                <div class="stars">
+		                    <i class="fas fa-star"></i>
+		                    <i class="fas fa-star"></i>
+		                    <i class="fas fa-star"></i>
+		                    <i class="fas fa-star"></i>
+		                    <i class="fas fa-star-half-alt"></i>
+		                </div>
+		                <div class="price"><p class="contentText">$10.00</p> </div><span>was $25.00</span>
+	                    <button onclick="addToCartClicked(6)" class="btn btn-primary shop-item-button" type="button"><a class="fas fa-shopping-cart"></a></button>
+
+		            </div>
+		        </div>
+		        <div class="box" class="shop-item">
+		         <div class="image">
+		       		<div class="icons">
+		            </div>
+		            	<img src="../Images/girlHoodie.png" alt="girlHoodie" class="images" style="width: 25vw;">
+		            </div>
+		         	<div class="content">
+		               <h3 class="title">Item #00108</h3>
+		               <div class="stars">
+		            	   <i class="fas fa-star"></i>
+		                  <i class="fas fa-star"></i>
+		                  <i class="fas fa-star"></i>
+		                  <i class="fas fa-star-half-alt"></i>
+		               </div>
+		               <div class="price"><p class="contentText">$15.00</p> </div><span>was $25.00</span>
+		           	        			
+		            <button onclick="addToCartClicked(7)" class="btn btn-primary shop-item-button" type="button"><a class="fas fa-shopping-cart"></a></button> 
+		         </div>	
+
+		        </div>
+		        <div class="box" class="shop-item">
+		         <div class="image">
+		       		<div class="icons">
+		            </div>
+		            	<img src="../Images/bag.png" alt="bag" class="images" style="width: 25vw;">
+		            </div>
+		         	<div class="content">
+		               <h3 class="title">Item #00109</h3>
+		               <div class="stars">
+		            	   <i class="fas fa-star"></i>
+		                  <i class="fas fa-star"></i>
+		                  <i class="fas fa-star"></i>
+		                  <i class="fas fa-star"></i>
+		                  <i class="fas fa-star"></i>
+		               </div>
+		               <div class="price"><p class="contentText">$15.00</p> </div><span>was $25.00</span>		        		
+		               	<button onclick="addToCartClicked(8)" class="btn btn-primary shop-item-button" type="button"><a class="fas fa-shopping-cart"></a></button>
+
+		            </div>
+		        </div>
+
+		    </div>
+		    
+		</section>
+
+		<!-- prodcuts section ends -->
+
+
+		<!-- cart section starts -->
+
+		<section class="container content-section">
+		            <h2 class="section-header">CART</h2>
+		            <div class="cart-row">
+		               <span class="cart-item cart-header cart-column">ITEM</span>
+		               <span class="cart-price cart-header cart-column">PRICE</span>
+		               <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+		            </div>
+		            <div class="cart-items">
+		            </div>
+		            <div class="cart-total">
+		                <strong class="cart-total-title">Total</strong>
+		                <span class="cart-total-price">$0</span>
+		            </div>
+		            <button class="btn btn-primary btn-purchase" type="button" style="color: black;
+		    			background-color: #52cbb7;">PURCHASE</button>
+		        </section>
+
+		<!-- cart section ends -->
+
+	</div>
+</body>
+<script type="text/javascript">
+	// var cartRow = document.createElement('div')
+function ready() {
+        var removeCartItemButtons = document.getElementsByClassName('btn-danger')
+    for (var i = 0; i < removeCartItemButtons.length; i++) {
+        var button = removeCartItemButtons[i]
+        button.addEventListener('onclick', removeCartItem)
+    }
+
+    var quantityInputs = document.getElementsByClassName('cart-quantity-input')
+    for (var i = 0; i < quantityInputs.length; i++) {
+        var input = quantityInputs[i]
+        input.addEventListener('change', quantityChanged)
+    }
+    document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
+}
+
+function purchaseClicked() {
+    alert('Thank you for your purchase')
+    var cartItems = document.getElementsByClassName('cart-items')[0]
+    while (cartItems.hasChildNodes()) {
+        cartItems.removeChild(cartItems.firstChild)
+    }
+    updateCartTotal()
+}
+
+function removeCartItem(event) {
+    var buttonClicked = event.target
+    buttonClicked.parentElement.parentElement.remove()
+    updateCartTotal()
+}
+
+function quantityChanged(event) {
+    var input = event.target
+    if (isNaN(input.value) || input.value <= 0) {
+        input.value = 1
+    }
+        console.log(input.value)
+
+    updateCartTotal()
+}
+
+function addToCartClicked(id) {
+    var item_title = document.getElementsByClassName('title')[id].innerText
+    var price = document.getElementsByClassName('price')[id].innerText
+    addItemToCart(item_title, price)
+    updateCartTotal()
+}
+
+function addItemToCart(item_title, price) {
+    var cartRow = document.createElement('div')
+    cartRow.classList.add('cart-row')
+    var cartItems = document.getElementsByClassName('cart-items')[0]
+    var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
+    for (var i = 0; i < cartItemNames.length; i++) {
+        if (cartItemNames[i].innerText == item_title) {
+            alert('This item is already added to the cart')
+            return
+        }
+    }
+
+    var cartRowContents = `
+        <div class="cart-item cart-column">
+            
+            <span class="cart-item-title"><p class="contentText">${item_title}</p></span>
+        </div>
+        <span class="cart-price cart-column"><p class="contentText">${price}</p></span>
+        <div class="cart-quantity cart-column">
+            <input class="cart-quantity-input" type="number" value="1">
+            <button class="btn btn-danger" type="button">REMOVE</button>
+        </div>`
+    cartRow.innerHTML = cartRowContents
+    cartItems.append(cartRow)
+    cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
+    cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
+}
+
+function updateCartTotal() {
+    var cartItemContainer = document.getElementsByClassName('shop-items')[0];
+    var cartRow = document.getElementsByClassName('cart-items')[0].children;
+
+    console.log(cartRow)
+    var total = 0
+    for (var i = 0; i < cartRow.length; i++) {
+        var cartItem = cartRow[i]
+        var priceElement = cartItem.getElementsByClassName('cart-price')[0]
+        var quantityElement = cartItem.getElementsByClassName('cart-quantity-input')[0]
+        var price =Number(priceElement.innerText.replace('$',''));
+        var quantity = Number(quantityElement.value)
+        total +=price * quantity
+    }
+
+    total = Math.round(total * 100) / 100
+    document.getElementsByClassName('cart-total-price')[0].innerText = '$'+total
+
+
+}
+ready()
+</script>
+</html>

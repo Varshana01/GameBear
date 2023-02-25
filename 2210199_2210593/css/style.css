@@ -12,7 +12,7 @@ nav{
   position: sticky;
   top: 0;
 }
-ul {
+.nav-ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -24,11 +24,11 @@ ul {
   
 }
 
-li {
+.nav-li {
   float: left;
 }
 
-li a {
+.nav-li a {
   display: block;
   color: white;
   text-align: center;
@@ -47,7 +47,7 @@ li a {
   margin-left: 60vw;
 }
 
-li .navButton:hover {
+.nav-li .navButton:hover {
   background-color: #92F2E3;
 }
 

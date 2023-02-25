@@ -1,0 +1,159 @@
+*{
+    margin:0 ;
+    padding:0 ;
+}
+#overlay{
+    position:absolute;
+    width:100%;
+    height:50%;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:2 ;
+    cursor:pointer;
+}
+
+/*Navbar*/
+nav{
+    margin: 0;
+    padding: 0;
+    top: 0;
+  }
+  .nav-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#52cbb7;
+    position: sticky;
+    top: 0;
+  
+    
+  }
+  
+  .nav-li {
+    float: left;
+  }
+  
+  .nav-li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 12px;
+    text-decoration: none;
+  
+  }
+  
+  .logo{
+    float: left;
+    display: inline-block;
+  
+  }
+  
+  .aboutUs{
+    margin-left: 45vw;
+  }
+  
+  .nav-li .navButton:hover {
+    background-color: #92F2E3;
+  }
+  
+#backgroundimageaboutus{
+    width:1300px;
+    height:450px;
+}
+.mission-statement {
+    color: #15d7b4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px 5px;
+    position: relative;
+    width: 100%;
+}
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+
+ h1:hover{
+    color: #15d7b4;
+} 
+    card css
+.dev-Images {
+	width: 100%;
+	border-radius: 12px;
+	object-fit: cover;
+  }
+
+ .dev-Images:hover{
+	transform:scale(1.2);
+	transition:all 1s;
+
+ }
+  .container-all{
+	display:inline-flex;
+	justify-content:space-between;
+	column-count: 3;
+  column-gap: 20px;
+  margin:35px;
+  
+  
+ 
+  }
+
+  .container-card {
+	display:inline-flex;
+	background-color: rgba(255, 255, 255, 0.966);
+  border: 1px solid #6bb7e3;
+  border-radius: 12px;
+  
+    
+  }
+
+  .containerScore{
+    border-left: 1px solid rgba(255,255,255,0.3);
+    border-top: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+  }
+
+
+  /* Style div elements that have class equal to name */
+  .name {
+	font-size: 24px;
+	font-weight: 600;
+	margin-top: 20px;
+  }
+  
+  /* Style p element of the cards */
+  .para-card {
+    font-size: 16px;
+    color: #1f6a7d;
+    line-height: 150%;
+  }
+  
+  
+  .card__details {
+	/* Add space around the details */
+	padding: 16px 8px 8px 8px;
+  position: relative;
+  top:0%;
+  left:20%;
+  }   
+
+  .directions-content-box{
+      background: rgb(213, 118, 118);
+      padding: 15px;
+      border-radius: 3px;
+  }
+
+
+.devTitle{
+  margin-left: 1rem;
+  margin-top: 20rem;
+  color: #65c9b1;
+  text-decoration: underline;
+}

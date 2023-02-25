@@ -5,6 +5,7 @@
     <title>Contact Us | GamerBear</title>
     <!-- css -->
 	<link rel="stylesheet" href="..\css\style.css">
+	<link rel="stylesheet" href="..\css\contact.css"
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,21 +20,90 @@
 	</style>
 </head>
 <header>
-   <!-- Navbar starts here -->
+	<!-- Navbar starts here -->
 	<nav>
 		<div class="nav-padding">
-			<ul>
-				<li><a href="../index.html"><img class="logo" src="../Images/icon4Nav.png" width="60"></a></li>
-				<li class="aboutUs"><a href="#about" class="navButton"><p>About us</p></a></li>
-				<li><a href="#store" class="navButton"><p>Store</p></a></li>
-				<li><a href="contact.html" class="navButton"><p>Contact us</p></a></li>
-				<li><a href="login.html" class="navButton"><p>Login</p></a></li>
-				<li><a href="#jobs" class="navButton" ><p>Acknoledgement Section</p></a></li>
-			</ul>
+			 <ul class="nav-ul">
+				 <li class="nav-li"><a href="index.html"><img class="logo" src="../Images/icon4Nav.png" width="60"></a></li>
+				 <li class="nav-li"> <a href="webpages/aboutus.html" class="navButton"><p>About us</p></a></li>
+				 <li class="nav-li"><a href="#store" class="navButton"><p>Store</p></a></li>
+				 <li class="nav-li"><a href="contact.html" class="navButton"><p>Contact us</p></a></li>
+				 <li class="nav-li"><a href="login.html" class="navButton"><p>Login</p></a></li>
+				 <li class="nav-li"><a href="#jobs" class="navButton" ><p>Acknoledgement Section</p></a></li>
+			 </ul>
 		</div>
 	</nav> 
-</header>
-<body id="contactbody">
+ </header>
+ <body>
+	<div class="wrapper">
+		<div class="title-text">
+		  <div class="title contact">Contact Us</div>
+		  <div class="title apply">Apply For Job</div>
+		</div>
+		<div class="form-container">
+		  <div class="slide-controls">
+			<input type="radio" name="slide" id="contact" checked>
+			<input type="radio" name="slide" id="apply">
+			<label for="contact" class="slide contact">Contact Us</label>
+			<label for="apply" class="slide apply">Apply For Job</label>
+			<div class="slider-tab"></div>
+		  </div>
+		  <div class="form-inner">
+			<form action="#" class="contact">
+			  <div class="field">
+				<input type="text" placeholder="Username" required>
+			  </div>
+			  <div class="field">
+				<input type="email" placeholder="Email Address" required>
+			  </div>
+			  <div class="field">
+				<textarea  rows="4" cols="45" placeholder="Leave your message here"></textarea>
+			  </div>
+			  <br>
+			  <div class="field btn">
+				<div class="btn-layer"></div>
+				<input type="submit" value="Send">
+			  </div>
+			</form>
+			<form action="#" class="apply">
+			  <div class="field apply">
+				<input type="text" placeholder="Full Name" class="inputapply"required>
+			  </div>
+			  <div class="field apply">
+				<input type="email" placeholder="Email Address" class="inputapply"required>
+			  </div>
+			  <div class="field apply" >
+				<input type="tel" placeholder="Phone Number: +230-5-123-4567"  class="inputapply" required>
+			  </div>
+			  <div class="field apply">
+				<input type="apply" placeholder="Desired Position" class="inputapply" required>
+			  </div>
+			  <div class="field btn">
+				<div class="btn-layer"></div>
+				<input type="submit" value="Submit" style="margin-bottom: 10px;">
+			  </div>
+			</form>
+		  </div>
+		</div>
+	  </div>
+  
+	  <script>
+		const ContactUsText = document.querySelector(".title-text .contact");
+		const ContactForm = document.querySelector("form.contact");
+		const ContactBtn = document.querySelector("label.contact");
+		const ApplyBtn = document.querySelector("label.apply");
+		ApplyBtn.onclick = (()=>{
+			ContactForm.style.marginLeft = "-50%";
+			ContactUsText.style.marginLeft = "-50%";
+		});
+		ContactBtn.onclick = (()=>{
+			ContactForm.style.marginLeft = "0%";
+		  	ContactUsText.style.marginLeft = "0%";
+		});
+		
+	  </script>
+  
+ </body>	
 	
-</body>
+	
 </html>

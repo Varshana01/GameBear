@@ -138,3 +138,9 @@ nav{
 .reqList{
 	list-style-type: circle;
 }
+.fa-star{
+	font-size: 20px;
+	color: black;
+	background-color: none;
+	margin-left: 1vh;
+}

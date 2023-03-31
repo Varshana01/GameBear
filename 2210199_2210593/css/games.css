@@ -50,7 +50,7 @@ nav{
 }
 
 .aboutUs{
-  margin-left: 60vw;
+  margin-left: 55vw;
 }
 
 .nav-li .navButton:hover {
@@ -71,12 +71,17 @@ nav{
 }
 
 #spacechesspic{
-  	width: 70rem;
+  	width: 60rem;
   	margin: 20 vw;
   	padding: 3vw 1vw 3vw 1vw;
 }
 
 #c4tsgamepic{
+	width: 60rem;
+  	margin: 20 vw;
+  	padding: 3vw 1vw 3vw 1vw;
+}
+#squidusgame{
 	width: 60rem;
   	margin: 20 vw;
   	padding: 3vw 1vw 3vw 1vw;
@@ -143,4 +148,11 @@ nav{
 	color: black;
 	background-color: none;
 	margin-left: 1vh;
+}
+.fa-star,.fa-star-half-stroke{
+	font-size: 20px;
+	color: black;
+	background-color: none;
+	margin-left: 1vh;
+	margin-bottom: 2vh;
 }

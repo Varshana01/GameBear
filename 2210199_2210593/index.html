@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Home|GamerBear</title>
 	<!-- tab img -->
-	<link rel = "icon" href ="Images/icon4Nav.png" type = "image/x-icon">
+	<link rel = "icon" href ="./Images/icon4Nav.png" type = "image/x-icon">
 	<!-- css -->
 	<link rel="stylesheet" href="./css/style.css">
 	<link rel="stylesheet" href="./css/homepage.css">
@@ -14,15 +14,34 @@
 	<link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
 	<!-- Icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/brands.min.css">">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/brands.min.css">
+	<style>
+		.titleRelease {
+            display: flex;
+            flex-direction: row;
+			font-size: 30px;
+			margin: 30px 15px 15px 15px;
+			padding: 3px;
+			
+		}
+          
+        .titleRelease:before, /* before and after the title, the line will appear */
+        .titleRelease:after {
+            content: "";
+            flex: 1 1;
+            border-bottom: 2px solid #0ca7ca;
+            margin: auto;
+        }
+
+	</style>
 </head>
 <body>
 	<!-- Navbar starts here -->
 	<nav>
 		<div class="nav-padding">
 			<ul class="nav-ul">
-				<li class="nav-li"><a href="index.html"><img class="logo" src="../Images/icon4Nav.png" width="60"></a></li>
-				<li class="nav-li"><a href="webpages/aboutus.html" class="navButton"><p>About us</p></a></li>
+				<li class="nav-li"><a href="index.html"><img class="logo" src="./Images/icon4Nav.png" width="60"></a></li>
+				<li class="nav-li aboutUs"><a href="webpages/aboutus.html" class="navButton"><p>About us</p></a></li>
 				<li class="nav-li"><a href="webpages/store.html" class="navButton"><p>Store</p></a></li>
 				<li class="nav-li"><a href="webpages/contact.html" class="navButton"><p>Contact us</p></a></li>
 				<li class="nav-li" ><a href="webpages/login.html" class="navButton"><p>Login</p></a></li>
@@ -30,19 +49,25 @@
 			</ul>
 		</div>
 	</nav>
+
 	<div id="homapagelogopic">
 		<img src="Images/homepage2pic.png" id="homapagelogopic">
 	</div>
+	<h2 class="titleRelease">Released Games</h2>
 	<div class="container">
 		<div class="game1">
-			<a href="webpages/chess.html"><img src="Images/spacechesspic.jpg" id="spacechesspic"></a>
-		</div><br><br>
+			<img src="Images/spacechesspic.jpg" id="spacechesspic">
+			<div><a href="webpages/chess.html" class="gameName">Space Chess</a></div>
+		</div>
+		<br><br>
 
 		<div class="game1">
 			<a href="webpages/squidus.html"><img src="Images/squiduspic.png" id="squidusgame"></a>
+			<div><a href="webpages/squidus.html" class="gameName">Squid Us</a></div>
 		</div>
 		<div class="game1">
 		<a href="webpages/c4ts.html"><img src=Images/c4tsgamepic.png id="C4tsgame"></a>
+		<div><a href="webpages/c4ts.html" class="gameName">4 CATS</a></div>
 		</div>
 	</div>
 	
@@ -119,7 +144,7 @@
 	            
 	        </div>
 	    </div>
-
+		<!-- Define the footer container -->	
 	<footer class="footer1">
 		<div class="container-footer">
 			<div class="row">
@@ -131,16 +156,39 @@
 						<li><a href="#">Terms of Use</a></li>
 					</ul>
 				</div>
-            
-			    <div class="footer-col">
-					<h4>Follow us</h4>
-					<div class="social-links">
-						<a href="#"><i class= "fa-facebook"></i></a>
-						<a href="#"><i class= "fa-instagram"></i></a>
-						<a href="#"><i class= "fa-linkedin-in"></i></a>
-						<a href="#"><i class= "fa-twitter"></i></a>
-					</div>
+            </div>
+		</div>
+		<div>
+			<h4 class="title-footer">ON EVERY PLATFORM FOR EVERY GAMER</h4>
+		</div>
+		<div class="container-footer">
+			<div class="row">
+				<div class="footer-col">
+					<h4>Useful Links</h4>
+					<ul>
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">Store</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">Login</a></li>
+						<li><a href="#">Acknowledgement</a></li>
+					</ul>
 				</div>
+				<div class="footer-col">
+					<ul>
+						<li class="contact-li">North America,</li>
+						<li class="contact-li">New York</li>
+						<li class="contact-li">ABC Street</li>
+						<li class="contact-li">Tel:
+							 <ul>
+								<li class="contact-li">432-9866</li>
+								<li class="contact-li">432-9876</li>
+								<li class="contact-li">432-9877</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</footer>
 </body>
 </html>

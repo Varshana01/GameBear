@@ -4,7 +4,7 @@ h1,h2,h3,h4,h5,h6,a,ul,li,p,label{
   font-family: 'Acme', sans-serif;
   font-size: 15px;
 }
-
+#52cbb7
 /*Navbar*/
 nav{
   margin: 0;
@@ -44,7 +44,7 @@ nav{
 }
 
 .aboutUs{
-  margin-left: 60vw;
+  margin-left: 55vw;
 }
 
 .nav-li .navButton:hover {
@@ -65,10 +65,11 @@ body{
 /*glassmorphism css*/
 
 .container4 {
-  position: absolute;
+  position: relative;
   transform: translate(-50%,-50%);
-  top: 50%;
+  top: 34%;
   left: 50%;
+  width: fit-content;
 }
 
 form {
@@ -160,4 +161,92 @@ input,.options{
   border-radius: 5000px;
   backdrop-filter: blur(5px);
   box-shadow: 4px 4px 20px 3px;
+}
+/*FOOTER*/
+
+.container-footer{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+
+.footer1{
+	background-color: #24262b;
+  padding: 40px 0;
+  display: flex;
+}
+.footer-col{
+  padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #0bf0e9;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #ffffff;
+	display: block;
+  width: 200px;
+}
+.contact-li{
+  font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #ffffff;
+	display: block;
+  width: 200px;
+}
+.footer-col ul a:hover{
+	color: #0b807e;
+}
+.title-footer{
+  font-size:25px;  
+  /* Create the gradient. */
+  background-image:-webkit-linear-gradient(left, #92F2E3, #2b6a5b);
+  
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+
+}
+/* Reference section */
+.table-sec{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 30px 0;
 }

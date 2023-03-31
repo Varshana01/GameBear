@@ -5,7 +5,6 @@
     <!-- tab img -->
 	<link rel = "icon" href ="..\Images\icon4Nav.png" type = "image/x-icon">
     <!-- css -->
-	<!-- <link rel="stylesheet" href="C:\Users\ty\Documents\Nidhi\Web\Tutorials\GameBear-main\2210199_2210593\css\style.css"> -->
 	<link rel="stylesheet" href="..\css\games.css">
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,19 +29,19 @@
 	<nav>
 		<div class="nav-padding">
 			<ul class="nav-ul">
-				<li class="nav-li"><a href="..\index.html"><img class="logo" src="..\Images\icon4Nav.png" width="60"></a></li>
-				<li class="nav-li aboutUs"><a href="#about" class="navButton"><p>About us</p></a></li>
-				<li class="nav-li"><a href="store.html" class="navButton"><p>Store</p></a></li>
-				<li class="nav-li"><a href="contact.html" class="navButton"><p>Contact us</p></a></li>
-				<li class="nav-li"><a href="login.html" class="navButton"><p>Login</p></a></li>
-				<li class="nav-li"><a href="#jobs" class="navButton" ><p>Acknoledgement Section</p></a></li>
+				<li class="nav-li"><a href="../index.html"><img class="logo" src="../Images/icon4Nav.png" width="60"></a></li>
+				<li class="nav-li aboutUs"><a href="../webpages/aboutus.html" class="navButton"><p>About us</p></a></li>
+				<li class="nav-li"><a href="../webpages/store.html" class="navButton"><p>Store</p></a></li>
+				<li class="nav-li"><a href="../webpages/contact.html" class="navButton"><p>Contact us</p></a></li>
+				<li class="nav-li" ><a href="../webpages/login.html" class="navButton"><p>Login</p></a></li>
+				<li class="nav-li"><a href="../webpages/reference.html" class="navButton" ><p>Acknoledgement Section</p></a></li>
 			</ul>
 		</div>
 	</nav> 
 </header>
 <body >
 	<div id="gamebody">
-		<h2 id="gametitle" style="font-size: 30px;">Space Chess</h2>
+		<h2 id="gametitle" style="font-size: 30px;">4 Cats</h2>
 		<div class="gamecontainer1">
 			<img src="..\Images\c4tsgamepic.png" id="c4tsgamepic">
 		</div>
@@ -94,24 +93,50 @@
 			</ul>
 			
 		</div>
+		<br>
+		<button type="button" class="collapsible">
+			<h2 id="gameRequirements" style="font-size: 25px;">Compatibility <i class="fa-solid fa-plus"></i></h2>
+		</button>
+		<div class="gameDes">
+			<p style="font-size: 15px;">
+				This game is compatible on
+			</p>
+			
+			<ul class="reqList">
+				<li>Iphones</li>
+				<li> Android</li>
+				<li>PCs with 128GB minimum</li>
+			</ul>
+		</div>
 
+		<br>
+			Last update: 30 Feb 2023
+		<br>
+		<div id="rating">
+			<h5>Game rating: </h5>
+			<i class="fa-solid fa-star"></i>
+			<i class="fa-solid fa-star"></i>
+			<i class="fa-solid fa-star"></i>
+			<i class="fa-solid fa-star"></i>
+			<i class="fa-solid fa-star-half-stroke"></i>
+		</div>
 	</div>
 	
-</body>
-<script type="text/javascript">
-	var coll = document.getElementsByClassName("collapsible");
-	var i;
+	<script type="text/javascript">
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
 
-	for (i = 0; i < coll.length; i++) {
-	  coll[i].addEventListener("click", function() {
-	    this.classList.toggle("active");
-	    var content = this.nextElementSibling;
-	    if (content.style.display === "block") {
-	      content.style.display = "none";
-	    } else {
-	      content.style.display = "block";
-	    }
-	  });
-	}
-</script>
+		for (i = 0; i < coll.length; i++) {
+		coll[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var content = this.nextElementSibling;
+			if (content.style.display === "block") {
+			content.style.display = "none";
+			} else {
+			content.style.display = "block";
+			}
+		});
+		}
+	</script>
+</body>
 </html>

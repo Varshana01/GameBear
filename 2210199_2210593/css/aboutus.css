@@ -140,20 +140,29 @@ nav{
 	/* Add space around the details */
 	padding: 16px 8px 8px 8px;
   position: relative;
-  top:0%;
-  left:20%;
+  left:17%;
+  bottom:5%;
   }   
 
-  .directions-content-box{
-      background: rgb(213, 118, 118);
-      padding: 15px;
-      border-radius: 3px;
-  }
+ 
 
 
 .devTitle{
   margin-left: 1rem;
   margin-top: 20rem;
   color: #65c9b1;
-  text-decoration: underline;
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  margin: 30px 15px 15px 15px;
+  padding: 3px;
+
+}
+
+.devTitle:before, /* before and after the title, the line will appear */
+.devTitle:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 2px solid #65c9b1;
+  margin: auto;
 }

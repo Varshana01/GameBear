@@ -6,6 +6,8 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>MANAGE USERS</title>
+   <style>
+    
 </head>
 
 <body>
@@ -54,8 +56,7 @@
              ?>
 
 <div class="container4">
-	  <form method="POST" >
-	   	<p class="welcome">Register with us!</p>
+	  <form method="POST">
 			<div class="inputBox">
 				<span class="fa-regular fa-user"></span>
 					<input type="text" placeholder="Username"  name="username"   value =<?php echo $username;?>><br>

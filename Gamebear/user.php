@@ -5,81 +5,52 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-   <!-- Bootstrap -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-
-   <!-- Font Awesome -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
    <title>MANAGE USERS</title>
-   <?php
-    include('connection.php');
-    ?>
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
 </head>
 
-<body>
-    <?php
+<body>  
+    <div class="container">
+        <h1>User Management</h1>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>user_id</th>
+                        <th>product_id</th>
+                        <th>username</th>
+                        <th>password</th>
+                        <th>email</th>
+                        <th>Operations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php 
+                    include('connection.php');
+                    $sql = "SELECT * FROM `users`";
+                    $result = mysqli_query($conn, $sql);
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo "<tr>";
+                        echo "<td>". $row['user_id'] ."</td>";
+                        echo "<td>". $row['product_id'] ."</td>";
+                        echo "<td>". $row['username'] ."</td>";
+                        echo "<td>". $row['Mypassword'] ."</td>";
+                        echo "<td>". $row['email'] ."</td>";
+                        echo "<td>";
+                        echo "<a href='update_user.php?updateid={$row['user_id']}' class='btn btn-primary'>Update</a>";
+                        echo "<a href='delete_user.php?deleteid={$row['user_id']}' class='btn btn-danger'>Delete</a>";
+                        echo "</td>";
+                        echo "</tr>";
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
-        $sql="Select * from users ";
-        $result=mysqli_query($conn,$sql);
-        if ($result) {
-            {   while ($row = mysqli_fetch_assoc($result)) {
-                    $user_id = $row['user_id'];
-                    $product_id = $row['product_id'];
-                    $username = $row['username'];
-                    $password = $row['Mypassword'];
-                    $email = $row['email'];
-                }
-      
-            }
-        }
-    ?>
-
-
-    <table class="table">
-        <thead>
-            <tr>
-            <th scope="col">user_id</th>
-            <th scope="col">product_id</th>
-            <th scope="col">username</th>
-            <th scope="col">password</th>
-            <th scope="col">email</th>
-            <th scope="col">Operations</th>
-            </tr>
-           
-                        <?php 
-                        $sql="Select * from users ";
-                        $result=mysqli_query($conn,$sql);
-                        if ($result) {
-                            {   while ($row = mysqli_fetch_assoc($result)) {
-                                $user_id = $row['user_id'];
-                                $product_id = $row['product_id'];
-                                $username = $row['username'];
-                                $password = $row['Mypassword'];
-                                $email = $row['email'];
-                                echo "<tr>";
-                                echo "<tbody>";
-                            echo "<th scope='col'>". $user_id ."</th>";
-                            echo "<th scope='col'>". $product_id ."</th>";
-                            echo "<th scope='col'>". $username ."</th>";
-                            echo "<th scope='col'>". $password."</th>";
-                            echo "<th scope='col'>". $email."</th>";
-                            echo "<td>";
-                            echo "<button><a href='update_user.php?updateid=$user_id'>Update</a></button>";
-                            echo"<button><a href='delete_user.php?deleteid=$user_id'>Delete</a></button>";
-                            echo "</td>";
-                            } 
-
-                            }
-                        } ?>
-                        
-                    </tbody>           
-            </tr>
-        </thead>
-        </tbody>
-    </table>
-
-
+    <!-- Bootstrap JS (you can include it at the bottom of the body) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+

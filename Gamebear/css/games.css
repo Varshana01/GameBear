@@ -124,7 +124,7 @@ nav{
 	backdrop-filter: blur(10px); /*blurs background*/
 }
 
-.collapsible {
+.collapse {
 	background-color: #3a555c;
 	cursor: pointer;
 	padding: 2px;
@@ -134,7 +134,7 @@ nav{
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.collapsible:hover {
+.collapse:hover {
   color: #92F2E3;
 }
 .fa-solid:hover{

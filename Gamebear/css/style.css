@@ -32,7 +32,7 @@ nav{
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 12px;
+  padding: 14px 1px;
   text-decoration: none;
 
 }
@@ -40,7 +40,9 @@ nav{
 .logo{
   float: left;
   display: inline-block;
-
+}
+.navPos{
+  padding: 22px 10px  10px 1px
 }
 
 .aboutUs{
@@ -51,7 +53,14 @@ nav{
   background-color: #92F2E3;
 }
 
-
+.userWelcome{
+  align-self: center;
+  padding: 34px 0;
+}
+.logout{
+  padding: 3px 0;
+  height: 20px;
+}
 /*body*/
 body{
   

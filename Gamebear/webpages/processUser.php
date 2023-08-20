@@ -16,6 +16,7 @@
             }
         else{
             echo"Error". $sql . "<br>" .mysqli_error($conn);
+            header( 'Location: register.html' );
         }
   
         mysqli_close($conn);

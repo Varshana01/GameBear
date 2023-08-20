@@ -4,7 +4,7 @@
 
         include('../connection.php');
         session_start();
-            $email = $_POST['Log_email'];
+            $uname = $_POST['Log_uname'];
             $passw = $_POST['Log_password'];
   
             $sql = "SELECT email,Mypassword FROM users WHERE email ='$email' AND Mypassword='$passw'";
@@ -12,14 +12,16 @@
             $result = mysqli_query($conn, $sql);
             
             if($result==1){
-                $_SESSION['Welcomeuser']=$Username;
-                header("Location: http://127.0.0.1/Gamebear/index.html");
+                $_SESSION['Welcomeuser']=$uname;
+                
+                header("Location: http://127.0.0.1:8080/Gamebear/index.php");
                 die();
             }
             else{
+                $_SESSION['loggedin'] = false;
                 echo"Error". $sql . "<br>" .mysqli_error($conn);
                 echo '<script>alert(" Invalid username/password. Please try again")
-                                window.location.href = "login.html";
+                                window.location.href = "login.php";
                             </script>';
                 }
                 

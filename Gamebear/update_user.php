@@ -38,8 +38,8 @@
                 $sql = "UPDATE `users` SET user_id='$id', username='$username',Mypassword='$password', email='$email' WHERE user_id=$id";
                 $result=mysqli_query($conn,$sql);
                 if ($result) {
-                        echo"Success";
-                        //heaader location
+                        // echo"Success";
+                        header("Location: http://127.0.0.1:8080/Gamebear/user.php");
                     }
                     else{
                         echo("Error in query: " .mysqli_error($conn));

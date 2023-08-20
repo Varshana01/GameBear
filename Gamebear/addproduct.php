@@ -3,6 +3,11 @@
 <head>
     <title>Add Product</title>
     <style>
+        h1{
+            color: white;
+            display: flex;
+            justify-content: center;
+        }
         .divAddProd{
             display: flex;
             justify-content: center;
@@ -13,25 +18,36 @@
             padding: 5px 5px;
             margin: 8px 8px;
             box-sizing: border-box;
-            float: left;
+           
+            float: right;
         }
         label {
+            color: white;
             padding: 12px 12px 12px 0;
             display: inline-block;
+            float: left;
             }
+        #container{
+            border-radius: 5px;
+            background-color: #191970;
+            padding: 20px;
+            margin: 5%;
+        }
     </style>
 </head>
 <body>
-    <h1>Add Product</h1>
-    <div class="divAddProd">
-        <form action="addproduct.php" method="post">
-            Product ID: <input type="text" name="product_id"><br> 
-            Staff ID : <input type="text" name="staff_id"><br>
-            Product Description: <input type="text" name="product_description"><br>
-            Price: <input type="text" name="price"><br>
-            Stock Quantity: <input type="text" name="stock_quantity"><br>
-            <input type="submit" value="Add Product">
-        </form>
+    <div id="container">
+        <h1>Add Product</h1>
+        <div class="divAddProd">
+            <form action="addproduct.php" method="post">
+            <label for="pId">Product ID:</label> <input type="text" name="product_id" id="pId"><br> 
+            <label for="sId">Staff ID : </label><input type="text" name="staff_id" id="sId"><br>
+            <label for="Pdesc">Product Description: </label><input type="text" name="product_description" id="Pdesc"><br>
+            <label for="Price">Price: </label><input type="text" name="price" id="Price"><br>
+            <label for="Squant">Stock Quantity: </label><input type="text" name="stock_quantity" id="Squants"><br>
+                <input type="submit" value="Add Product">
+            </form>
+        </div>
     </div>
     <?php
         include('connection.php');

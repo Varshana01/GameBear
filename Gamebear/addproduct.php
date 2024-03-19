@@ -51,27 +51,27 @@
     </div>
     <?php
         include('connection.php');
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $product_id = $_POST['product_id'];
-    $staff_id = $_POST['staff_id'];
-    $product_description = $_POST['product_description'];
-    $price = $_POST['price'];
-    $stock_quantity = $_POST['stock_quantity'];
+        if ($_SERVER["REQUEST_METHOD"] == "POST") { //if method is post
+            $product_id = $_POST['product_id']; //save values in variables
+            $staff_id = $_POST['staff_id'];
+            $product_description = $_POST['product_description'];
+            $price = $_POST['price'];
+            $stock_quantity = $_POST['stock_quantity'];
 
-    $sql = "INSERT INTO products (product_id,staff_id,product_description,price, stock_quantity)
-            VALUES ('$product_id','$staff_id','$product_description', '$price', '$stock_quantity')";
+            $sql = "INSERT INTO products (product_id,staff_id,product_description,price, stock_quantity)
+                    VALUES ('$product_id','$staff_id','$product_description', '$price', '$stock_quantity')";//insert values in database
 
-    if ($conn->query($sql) === TRUE) {
-        echo "Product added successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-}
-?>
+            if ($conn->query($sql) === TRUE) {
+                echo "Product added successfully"; //if success, display message
+            } else {
+                echo "Error: " . $sql . "<br>" . $conn->error; //else, display error
+            }
+        }
+    ?>
 
 </body>
 

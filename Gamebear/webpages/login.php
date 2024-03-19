@@ -76,7 +76,7 @@
 <body >
 	<div id="loginbody">
 		<div class="container4">
-		  <form action="processLogin.php" method="POST" name="login">
+		  <form action="processLogin.php" method="POST" name="login"> <!--form will be sent to processLogin.php-->
 			   <h6 class="welcome">Welcome</h6>
 			   <div class="inputBox">
             	<span class="fa-regular fa-envelope"></span>

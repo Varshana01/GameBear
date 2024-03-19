@@ -39,6 +39,7 @@
                 $result=mysqli_query($conn,$sql);
                 if ($result) {
                         // echo"Success";
+                        //redirecting to user page
                         header("Location: http://127.0.0.1:8080/Gamebear/user.php");
                     }
                     else{

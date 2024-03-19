@@ -37,7 +37,7 @@
 	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 	<script>
-		$(document).ready(function(){
+		$(document).ready(function(){//jQuery to apply fade in effect
 			$("#descBut").click(function(){
 				$("#desc").fadeIn("slow");
 			});
@@ -159,7 +159,7 @@
 	</div>
 	
 </body>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	var coll = document.getElementsByClassName("collapsible");
 	var i;
 
@@ -174,5 +174,5 @@
 	    }
 	  });
 	}
-</script>
+</script> -->
 </html>

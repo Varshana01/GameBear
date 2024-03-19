@@ -14,7 +14,7 @@
 	</head>
 
 	<body>
-		<form action="validate.php" method="post">
+		<form action="validate.php" method="post"> <!--form sent to validate.php-->
 			<div class="login-box">
 				<h1>Login</h1>
 

@@ -33,6 +33,20 @@
   		}
   		
 	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){		//jQuery to apply fade in effect
+			$("#descBut").click(function(){
+				$("#desc").fadeIn("slow");
+			});
+			$("#gameReq").click(function(){
+				$("#Req").fadeIn("slow");
+			});
+			$("#comp").click(function(){
+				$("#compDesc").fadeIn("slow");
+			});
+		});
+	</script>
 </head>
 <header>
    <!-- Navbar starts here -->
@@ -40,10 +54,10 @@
           <div class="nav-padding">
             <ul class="nav-ul">
               <li class="nav-li"><a href="../index.php" class="logoLink"><span><img class="logo" src="../Images/icon4Nav.png" width="60"></span></a></li>
-              <li class="nav-li userWelcome navPos"><?php if ($_SESSION['loggedin'] == true) {
+              <li class="nav-li userWelcome navPos"><?php if ($_SESSION['loggedin'] == true) { //if user is logged in, then username will be displayed
                                       echo "Welcome, ".($_SESSION['Welcomeuser']);
                                     }
-                                    if($_SESSION['loggedin'] == false){
+                                    if($_SESSION['loggedin'] == false){//otherwise just Welcome will be displayed 
                                       echo"Welcome.";
                                     }
                                   ?>
@@ -79,10 +93,10 @@
 				<div class="icon"><i class="fa-brands fa-app-store"></i></div>
 			</div>
 		</div>
-		<button type="button" class="collapsible">
+		<button type="button"  class="collapse" id="descBut">
 			<h2 id="gameSypnosis" style="font-size: 25px;">Sypnosis <i class="fa-solid fa-plus"></i></h2>
 		</button>
-		<div class="gameDes">
+		<div class="gameDes" id="desc">
 			<p style="font-size: 15px;">The cat game was a fun and playful experience, set in a vibrant and colorful world full of feline friends. The game took place in a bright, sunny meadow, where the grass was green and the flowers bloomed in brilliant hues of orange, pink, and blue.
 			<br><br>
 			The players took on the role of cute and cuddly cats, each with their own unique personalities and quirks. They could run, jump, climb, and play, exploring the world around them and interacting with other cats along the way. There were all kinds of challenges and obstacles to overcome, from jumping over logs and running through fields to climbing up trees and catching butterflies.
@@ -90,10 +104,10 @@
 			As the players explored the world of the cat game, they discovered all kinds of fun and interesting things. There were hidden secrets and treasures to be found, as well as mini-games and challenges to complete. They could customize their cats with different colors, patterns, and accessories, making each one unique and special.</p>
 		</div>
 		<br>
-		<button type="button" class="collapsible">
+		<button type="button" class="collapse" id="gameReq">
 			<h2 id="gameRequirements" style="font-size: 25px;">Requirements <i class="fa-solid fa-plus"></i></h2>
 		</button>
-		<div class="gameDes">
+		<div class="gameDes" id="Req">
 			<p style="font-size: 15px;">
 				Necessary PC requirements
 			</p>
@@ -116,10 +130,10 @@
 			
 		</div>
 		<br>
-		<button type="button" class="collapsible">
+		<button type="button" class="collapse" id="comp">
 			<h2 id="gameRequirements" style="font-size: 25px;">Compatibility <i class="fa-solid fa-plus"></i></h2>
 		</button>
-		<div class="gameDes">
+		<div class="gameDes" id="compDesc">
 			<p style="font-size: 15px;">
 				This game is compatible on
 			</p>
@@ -144,7 +158,7 @@
 		</div>
 	</div>
 </body>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	var coll = document.getElementsByClassName("collapsible");
 	var i;
 
@@ -159,5 +173,5 @@
 	    }
 	  });
 	}
-</script>
+</script> -->
 </html>

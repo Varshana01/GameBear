@@ -35,6 +35,20 @@
   		}
   		
 	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){//jQuery to apply fade in effect
+			$("#descBut").click(function(){
+				$("#desc").fadeIn("slow");
+			});
+			$("#gameReq").click(function(){
+				$("#Req").fadeIn("slow");
+			});
+			$("#comp").click(function(){
+				$("#compDesc").fadeIn("slow");
+			});
+		});
+	</script>
 </head>
 <header>
    <!-- Navbar starts here -->
@@ -81,19 +95,19 @@
 				<div class="icon"><i class="fa-brands fa-app-store"></i></div>
 			</div>
 		</div>
-		<button type="button" class="collapsible">
+		<button type="button"  class="collapse" id="descBut">
 			<h2 id="gameSypnosis" style="font-size: 25px;">Sypnosis <i class="fa-solid fa-plus"></i></h2>
 		</button>
-		<div class="gameDes">
+		<div class="gameDes" id="desc">
 			<p style="font-size: 15px;">The Squid Us game is set in a 3D environment.The player is stranded on a unhabitated island with the aim to win a prize money in a limited number of days.
 			<br><br>
 			As the game progesses,the player need to be ready for an attack when left alone with someone else,what is some is an imposter.The latter wants to kill everyone and will stop at nothing.He is cunning and sneaky. He can hide in dark corners and wait for his victim, or suddenly jump out of a ventilation shaft and attack from behind. The player should be alert and defend himself with the help of a gun.</p>
 		</div>
 		<br>
-		<button type="button" class="collapsible">
+		<button type="button" class="collapse" id="gameReq">
 			<h2 id="gameRequirements" style="font-size: 25px;">Requirements <i class="fa-solid fa-plus"></i></h2>
 		</button>
-		<div class="gameDes">
+		<div class="gameDes" id="Req">
 			<p style="font-size: 15px;">
 				Necessary PC requirements
 			</p>
@@ -116,10 +130,10 @@
             
 		</div>
 		<br>
-		<button type="button" class="collapsible">
+		<button type="button" class="collapse" id="comp">
 			<h2 id="gameRequirements" style="font-size: 25px;">Compatibility <i class="fa-solid fa-plus"></i></h2>
 		</button>
-		<div class="gameDes">
+		<div class="gameDes" id="compDesc">
 			<p style="font-size: 15px;">
 				This game is compatible on
 			</p>
@@ -143,7 +157,7 @@
 		</div>
 	</div>
 </body>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	var coll = document.getElementsByClassName("collapsible");
 	var i;
 
@@ -158,5 +172,5 @@
 	    }
 	  });
 	}
-</script>
+</script> -->
 </html>

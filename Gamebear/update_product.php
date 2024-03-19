@@ -34,8 +34,9 @@
                 $desc = $_POST['product_description'];
                 $price = $_POST['price'];
                 $stock = $_POST['stock_quantity'];
-                
-                $sql = "UPDATE `products` SET product_id='$id', product_description='$desc',price='$price', stock_quantity='$stock' WHERE product_id=$id";
+                $image = $_POST['product_image'];
+                //query to update records
+                $sql = "UPDATE `products` SET product_id='$id', product_description='$desc',price='$price', stock_quantity='$stock', product_image='$image' WHERE product_id=$id";
                 $result=mysqli_query($conn,$sql);
                 if ($result) {
                         echo"Success";
@@ -46,6 +47,7 @@
                         echo("Error in query: " .mysqli_error($conn));
                     }
                 }
+                //query to fetch data from products table 
                 $sql="Select * from products";
                         $result=mysqli_query($conn,$sql);
                         if ($result) {
@@ -54,6 +56,7 @@
                                 $desc = $row['product_description'];
                                 $price = $row['price'];
                                 $stock = $row['stock_quantity'];
+                                $image = $row['product_image'];
                             }
                         }
                     }
@@ -62,17 +65,24 @@
 <div class="container4">
 	  <form method="POST">
 			<div class="inputBox">
-				<span class="fa-regular fa-user"></span>
 					<input type="text" placeholder="Description"  name="product_description"   value =<?php echo $desc;?>><br>
 				</div>
 				<div class="inputBox">
-					<span class="fa-regular fa-envelope"></span>
 					<input type="text" placeholder="price"  name="price" value =<?php echo $price;?>><br>
 				</div>
 				<div class="inputBox">
-					<span class="fa-solid fa-lock"></span>
 					<input type="text" placeholder="Stock Quantity"  name="stock_quantity"  value =<?php echo $stock;?>><br>
 				</div>
+                <div class="inputBox">
+					<input type="text" placeholder="Image name"  name="product_image"  value =<?php echo $image;?>><br>
+				</div>
+                <!-- <div class="inputBox">
+                <form action="upload.php" method="post" enctype="multipart/form-data">
+                    Select image to upload:
+                    <input type="file" name="fileToUpload" id="fileToUpload">
+                    <input type="submit" value="Upload Image" name="submit" value =<?php echo $stock;?>>
+                </form>
+                </div> -->
                 <br>
             <input type="submit"  id = "updateid"  name = "submit" value="Update"><br>
                 </div>

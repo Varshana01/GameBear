@@ -62,7 +62,7 @@
 
 	</div> 
 	<div class="container4">
-	  <form action="processUser.php" method="POST" name="register">
+	  <form action="processUser.php" method="POST" name="register"> <!--Form submitted to processUser.php for processing-->
 	   	<p class="welcome">Register with us!</p>
 			<div class="inputBox">
 				<span class="fa-regular fa-user"></span>

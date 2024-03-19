@@ -3,7 +3,7 @@
 <head>
     <title>Product List</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-
+    <link rel=”stylesheet” href=”https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css”>
 <style>
     /* Reset some default styles */
 body, h1, h2, h3, h4, h5, h6, p {
@@ -63,6 +63,12 @@ a {
     color: white;
     text-decoration: none;
 }
+
+.updatedImage{
+    height: 90px;
+	width: 90px;
+	object-fit: cover;
+}
 </style>
 </head>
 <body>
@@ -76,31 +82,38 @@ a {
                 <th>Product Description</th>
                 <th>Price</th>
                 <th>Stock Quantity</th>
-                                        <th>Operations</th>
+                <th>Product Image</th>
+                <th>Operations</th>
 
             </tr>
             <!-- PHP code to fetch products and generate rows -->
             <?php
             include('connection.php');
-            $sql = "SELECT * FROM products";
-            $result = $conn->query($sql);
+            $sql = "SELECT * FROM products"; //sql query to fetch records
+            $result = $conn->query($sql); //same as $result = mysqli_query($conn, $sql);
 
-            while ($row = $result->fetch_assoc()) {
+            while ($row = $result->fetch_assoc()) { //display values from database in table
                 echo "<tr>
                         <td>".$row['product_id']."</td>
                         <td>".$row['staff_id']."</td>
                         <td>".$row['product_description']."</td>
                         <td>".$row['price']."</td>
                         <td>".$row['stock_quantity']."</td>
+                        <td> 
+                            <img src='".$row['product_image']."' class='updatedImage'>
+                        </td>
                         <td>
                         <a href='update_product.php?updateid={$row['product_id']}' class='btn btn-primary'>Update</a>
                         <a href='delete_product.php?deleteid={$row['product_id']}' class='btn btn-danger'>Delete</a>
                         </td>
+                        <td>
+                            
                       </tr>";
             }
 
             $conn->close();
             ?>
+            
         </table>
     </div>
 </body>

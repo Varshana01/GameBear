@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if(isset($_SESSION['Welcomeuser'])){
+	if(isset($_SESSION['Welcomeuser'])){ 
 		$_SESSION['loggedin'] = true;
 	}
 	else{
@@ -76,7 +76,7 @@
 														?>
 				</li>
 				<li class="nav-li aboutUs navPos"><a href="webpages/aboutus.php" class="navButton"><p>About us</p></a></li>
-				<li class="nav-li navPos"><a href="webpages/store.php" class="navButton"><p>Store</p></a></li>
+				<li class="nav-li navPos"><a href="store.php" class="navButton"><p>Store</p></a></li>
 				<li class="nav-li navPos"><a href="webpages/contact.php" class="navButton"><p>Contact us</p></a></li>
 				<li class="nav-li navPos" ><a href="webpages/login.php" class="navButton"><p>Login</p></a></li>
 				<li class="nav-li navPos"><a href="webpages/reference.php" class="navButton" ><p>Reference</p></a></li>

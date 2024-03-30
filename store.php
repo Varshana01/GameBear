@@ -128,6 +128,20 @@
 
 		<!-- cart section ends -->
         <script>
+            function ready() {
+                    var removeCartItemButtons = document.getElementsByClassName('btn-danger')
+                for (var i = 0; i < removeCartItemButtons.length; i++) {
+                    var button = removeCartItemButtons[i]
+                    button.addEventListener('onclick', removeCartItem)
+                }
+
+                var quantityInputs = document.getElementsByClassName('cart-quantity-input')
+                for (var i = 0; i < quantityInputs.length; i++) {
+                    var input = quantityInputs[i]
+                    input.addEventListener('change', quantityChanged)
+                }
+                document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
+            }
             var xmlDoc = loadXMLDoc("store.xml");
             var imageDisplayed = "<p>";
             var productlist = xmlDoc.getElementsByTagName("product");
@@ -145,32 +159,20 @@
                 // button creation
                 var cartButton = document.getElementById("cartButt");
                 var onclickFunc = document.createAttribute("onclick");
-                cartButton.setAttribute("onclick", addToCartClicked(i));
+                cartButton.setAttribute("onclick", "addToCartClicked("+i+")");
                 
 
                 var title = productlist[i].getElementsByTagName("prodId")[0].childNodes[0].nodeValue;
                 imageDisplayed += "Item # " + title + "<br><br>";
                 var price = productlist[i].getElementsByTagName("price")[0].childNodes[0].nodeValue;
                 imageDisplayed += "Price: " + price + "<br><br>";
+                imageDisplayed += cartButton.outerHTML
                 
             }
 
             document.getElementById("imageContent").innerHTML = imageDisplayed;
 
-            function ready() {
-                    var removeCartItemButtons = document.getElementsByClassName('btn-danger')
-                for (var i = 0; i < removeCartItemButtons.length; i++) {
-                    var button = removeCartItemButtons[i]
-                    button.addEventListener('onclick', removeCartItem)
-                }
-
-                var quantityInputs = document.getElementsByClassName('cart-quantity-input')
-                for (var i = 0; i < quantityInputs.length; i++) {
-                    var input = quantityInputs[i]
-                    input.addEventListener('change', quantityChanged)
-                }
-                document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
-            }
+            
 
             function purchaseClicked() {
                 var cartItems = document.getElementsByClassName('cart-items')[0]
@@ -197,9 +199,9 @@
             }
 
             function addToCartClicked(id) {
-                var item_title = document.getElementsByClassName('title')[id].innerText
-                var price = document.getElementsByClassName('price')[id].innerText
-                addItemToCart(item_title, price)
+                // var item_title = document.getElementsByClassName('title')[id].innerText
+                // var price = document.getElementsByClassName('price')[id].innerText
+                addItemToCart(title, price)
                 updateCartTotal()
             }
 

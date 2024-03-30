@@ -89,7 +89,6 @@
              </nav>
      </header>
     <body>
-        <h1>Store</h1>
         <div id="storebody">
             <!-- products section starts  -->
     
@@ -97,14 +96,7 @@
                <div class="box-container" class="shop-items">
     
                   <div class="box" class="shop-item" id="shop-item">
-                        <div class="image" id="imageContent"></div>
-                            <div class="icon">
-                                <div class="content">
-                                    <h3 class="title"></h3>
-                                    
-                                    <div class="price contentText" id="priceContent"></div>
-                                </div>
-                            </div>
+                       
                     </div>
                 </div>
             </section>
@@ -162,10 +154,11 @@
                 var price = productlist[i].getElementsByTagName("price")[0].childNodes[0].nodeValue;
                 imageDisplayed += "Price: $ " + price + "<br><br>";
                 
-                
+                var shopItem = document.getElementById("shop-item");
+                shopItem.innerHTML = imageDisplayed;
             }
 
-            document.getElementById("imageContent").innerHTML = imageDisplayed;
+            // document.getElementById("imageContent").innerHTML = imageDisplayed;
 
             function ready() {
                 var removeCartItemButtons = document.getElementsByClassName("btn-danger");

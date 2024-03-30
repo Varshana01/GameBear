@@ -18,7 +18,6 @@
                 <thead>
                     <tr>
                         <th>user_id</th>
-                        <th>product_id</th>
                         <th>username</th>
                         <th>password</th>
                         <th>email</th>
@@ -33,7 +32,6 @@
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>";
                         echo "<td>". $row['user_id'] ."</td>";
-                        echo "<td>". $row['product_id'] ."</td>";
                         echo "<td>". $row['username'] ."</td>";
                         echo "<td>". $row['Mypassword'] ."</td>";
                         echo "<td>". $row['email'] ."</td>";

@@ -48,8 +48,8 @@
 					var xhr = new XMLHttpRequest();
 
 					xhr.onreadystatechange = function() {
-						if (xhr.readyState === 4 && xhr.status === 200) {
-							var productDiv = document.createElement('div');
+						if (xhr.readyState === 4 && xhr.status === 200) { //if everything is ok, create a div to
+							var productDiv = document.createElement('div'); //display msg
 							productDiv.innerHTML = xhr.responseText;
 
 							var productsDiv = document.getElementById('products');
@@ -102,18 +102,18 @@
 		      <div class="box" class="shop-item">
 		         <div class="image">
 		       		<div class="icons">
-		            </div>
-		            	<img src="../Images/boyHoodie.png" alt="boyHoodie" class="images">
-		            </div>
-		         	<div class="content">
-		               <h3 class="title">Item #00101</h3>
-		               <div class="stars">
-		            	   <i class="fas fa-star"></i>
-		                  <i class="fas fa-star"></i>
-		                  <i class="fas fa-star"></i>
-		                  <i class="fas fa-star"></i>
-		                  <i class="fas fa-star-half-alt"></i>
-		               </div>
+						</div>
+							<img src="../Images/boyHoodie.png" alt="boyHoodie" class="images">
+						</div>
+						<div class="content">
+						<h3 class="title">Item #00101</h3>
+						<div class="stars">
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star"></i>
+							<i class="fas fa-star-half-alt"></i>
+						</div>
 		               <div class="price"><p class="contentText">$15.00 </p></div><span>was $25.00</span>
 		               <button onclick="addToCartClicked(0)" class="btn btn-primary shop-item-button" type="button"><a class="fas fa-shopping-cart"></a></button>
 
@@ -330,7 +330,6 @@ function ready() {
 }
 
 function purchaseClicked() {
-    // alert('Thank you for your purchase')
     var cartItems = document.getElementsByClassName('cart-items')[0]
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild)

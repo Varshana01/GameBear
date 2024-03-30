@@ -145,7 +145,7 @@
                 // button creation
                 var cartButton = document.getElementById("cartButt");
                 var onclickFunc = document.createAttribute("onclick");
-                cartButton.setAttribute("onclick", addToCartClicked(i));
+                cartButton.setAttribute("onclick", "addToCartClicked("+i+")");
                 
 
                 var title = productlist[i].getElementsByTagName("prodId")[0].childNodes[0].nodeValue;
@@ -157,13 +157,14 @@
 
             document.getElementById("imageContent").innerHTML = imageDisplayed;
 
+
             function ready() {
-                    var removeCartItemButtons = document.getElementsByClassName('btn-danger')
+                var removeCartItemButtons = document.getElementsByClassName('btn-danger')
                 for (var i = 0; i < removeCartItemButtons.length; i++) {
                     var button = removeCartItemButtons[i]
-                    button.addEventListener('onclick', removeCartItem)
+                    button.addEventListener('click', removeCartItem)
                 }
-
+            
                 var quantityInputs = document.getElementsByClassName('cart-quantity-input')
                 for (var i = 0; i < quantityInputs.length; i++) {
                     var input = quantityInputs[i]
@@ -171,7 +172,6 @@
                 }
                 document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
             }
-
             function purchaseClicked() {
                 var cartItems = document.getElementsByClassName('cart-items')[0]
                 while (cartItems.hasChildNodes()) {

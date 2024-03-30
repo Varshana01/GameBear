@@ -49,7 +49,7 @@
     <product>
         <img src="./Images/mug.png"></img>
         <prodId>00107</prodId>
-        <price>09</price>
+        <price>9</price>
         <buttonNo>6</buttonNo>
     </product>
 </store>

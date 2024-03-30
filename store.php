@@ -207,19 +207,23 @@
             }
 
             function addToCartClicked(id) {
-                var item_title = document.getElementsByClassName("title")[id].innerText;
-                var price = document.getElementsByClassName("price")[id].innerText;
-                addItemToCart(item_title, price);
+                var title ="";
+                var price="";
+                for (i = 0; i < productlist.length; i++) {
+                    var title = productlist[id].getElementsByTagName("prodId")[0].childNodes[0].nodeValue;
+                    var price = productlist[id].getElementsByTagName("price")[0].childNodes[0].nodeValue;
+                }
+                addItemToCart(title, price);
                 updateCartTotal();
             }
 
-            function addItemToCart(item_title, price) {
+            function addItemToCart(title, price) {
                 var cartRow = document.createElement("div");
                 cartRow.classList.add("cart-row");
                 var cartItems = document.getElementsByClassName("cart-items")[0];
                 var cartItemNames = cartItems.getElementsByClassName("cart-item-title");
                 for (var i = 0; i < cartItemNames.length; i++) {
-                    if (cartItemNames[i].innerText == item_title) {
+                    if (cartItemNames[i].innerText == title) {
                         alert("This item is already added to the cart");
                         return;
                     }
@@ -227,7 +231,7 @@
 
                 var cartRowContents = `
                     <div class="cart-item cart-column">
-                        <span class="cart-item-title"><p class="contentText">${item_title}</p></span>
+                        <span class="cart-item-title"><p class="contentText">${title}</p></span>
                     </div>
                     <span class="cart-price cart-column"><p class="contentText">${price}</p></span>
                     <div class="cart-quantity cart-column">
@@ -241,21 +245,21 @@
             }
 
             function updateCartTotal() {
-                var cartItemContainer = document.getElementsByClassName("shop-items")[0];
-                var cartRows = document.getElementsByClassName("cart-row");
-
+                var cartRow = document.getElementsByClassName('cart-items')[0].children;
                 var total = 0;
-                for (var i = 0; i < cartRows.length; i++) {
-                    var cartRow = cartRows[i];
-                    var priceElement = cartRow.getElementsByClassName("cart-price")[0];
-                    var quantityElement = cartRow.getElementsByClassName("cart-quantity-input")[0];
-                    var price = Number(priceElement.innerText.replace("$", ""));
-                    var quantity = Number(quantityElement.value);
+
+                for (var i = 0; i < cartRow.length; i++) {
+                    var cartItem = cartRow[i];
+                    var priceElement = cartItem.getElementsByClassName('cart-price')[0];
+                    var quantityElement = cartItem.getElementsByClassName('cart-quantity-input')[0];
+                    var priceText = priceElement.innerText;
+                    var price = parseFloat(priceText.replace(/[^0-9.-]+/g, "")); // Extract numeric value
+                    var quantity = parseFloat(quantityElement.value);
                     total += price * quantity;
                 }
 
                 total = Math.round(total * 100) / 100;
-                document.getElementsByClassName("cart-total-price")[0].innerText = "$" + total;
+                document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total.toFixed(2);
             }
 
             ready();

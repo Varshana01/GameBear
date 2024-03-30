@@ -7,30 +7,35 @@
         <img src="./Images/case1.png"></img>
         <prodId>00101</prodId>
         <price>12</price>
+        <buttonNo>0</buttonNo>
         
     </product>
     <product>
         <img src="./Images/boyHoodie.png"></img>
         <prodId>00102</prodId>
         <price>43</price>
+        <buttonNo>1</buttonNo>
         
     </product>
     <product>
         <img src="./Images/case1.png"></img>
         <prodId>00103</prodId>
         <price>456</price>
+        <buttonNo>2</buttonNo>
         
     </product>
     <product>
         <img src="./Images/case2.png"></img>
         <prodId>00104</prodId>
         <price>23</price>
+        <buttonNo>3</buttonNo>
         
     </product>
     <product>
         <img src="./Images/girlShirt.png"></img>
         <prodId>00105</prodId>
         <price>78</price>
+        <buttonNo>4</buttonNo>
         
     </product>
 
@@ -38,12 +43,13 @@
         <img src="./Images/mask.png"></img>
         <prodId>00106</prodId>
         <price>34</price>
+        <buttonNo>5</buttonNo>
         
     </product>
     <product>
         <img src="./Images/mug.png"></img>
         <prodId>00107</prodId>
         <price>09</price>
-        
+        <buttonNo>6</buttonNo>
     </product>
 </store>

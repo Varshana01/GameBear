@@ -172,7 +172,21 @@
 
             document.getElementById("imageContent").innerHTML = imageDisplayed;
 
-            
+
+            function ready() {
+                    var removeCartItemButtons = document.getElementsByClassName('btn-danger')
+                for (var i = 0; i < removeCartItemButtons.length; i++) {
+                    var button = removeCartItemButtons[i]
+                    button.addEventListener('onclick', removeCartItem)
+                }
+
+                var quantityInputs = document.getElementsByClassName('cart-quantity-input')
+                for (var i = 0; i < quantityInputs.length; i++) {
+                    var input = quantityInputs[i]
+                    input.addEventListener('change', quantityChanged)
+                }
+                document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
+            }
 
             function purchaseClicked() {
                 var cartItems = document.getElementsByClassName('cart-items')[0]

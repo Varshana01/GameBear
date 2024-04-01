@@ -172,6 +172,20 @@
 
 		<!-- cart section ends -->
         <script>
+            function ready() {
+                    var removeCartItemButtons = document.getElementsByClassName('btn-danger')
+                for (var i = 0; i < removeCartItemButtons.length; i++) {
+                    var button = removeCartItemButtons[i]
+                    button.addEventListener('onclick', removeCartItem)
+                }
+
+                var quantityInputs = document.getElementsByClassName('cart-quantity-input')
+                for (var i = 0; i < quantityInputs.length; i++) {
+                    var input = quantityInputs[i]
+                    input.addEventListener('change', quantityChanged)
+                }
+                document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
+            }
             var xmlDoc = loadXMLDoc("store.xml");
             var imageDisplayed = "<p>";
             var productlist = xmlDoc.getElementsByTagName("product");
@@ -203,7 +217,7 @@
                 imageDisplayed += "Item # " + title + "<br><br>";
                 imageDisplayed += cartButton.outerHTML;
                 var price = productlist[i].getElementsByTagName("price")[0].childNodes[0].nodeValue;
-                imageDisplayed += "Price: $ " + price + "<br><br>";
+                imageDisplayed += "Price: " + price + "<br><br>";
                 
                 var shopItem = document.getElementById("shop-item");
                 shopItem.innerHTML = imageDisplayed;
@@ -250,14 +264,10 @@
             }
 
             function addToCartClicked(id) {
-                var title ="";
-                var price="";
-                for (i = 0; i < 4; i++) {
-                    var title = productlist[id].getElementsByTagName("prodId")[0].childNodes[0].nodeValue;
-                    var price = productlist[id].getElementsByTagName("price")[0].childNodes[0].nodeValue;
-                }
-                addItemToCart(title, price);
-                updateCartTotal();
+                var item_title = document.getElementsByClassName('title')[id].innerText
+                var price = document.getElementsByClassName('price')[id].innerText
+                addItemToCart(item_title, price)
+                updateCartTotal()
             }
 
             function addItemToCart(title, price) {

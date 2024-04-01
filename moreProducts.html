@@ -1,0 +1,67 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Products | GamerBear</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/store.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+    <section id="products">
+        <div class="box-container shop-items" id="moreItems">
+            <!-- Products will be appended here -->
+        </div>
+    </section>
+
+    <script>
+        $(document).ready(function(){
+            var xmlDoc = loadXMLDoc("store.xml"); // Define loadXMLDoc function or remove if unnecessary
+
+            var productlist = xmlDoc.getElementsByTagName("product");
+            for (var i = 4; i < productlist.length; i++) {
+                var imageDisplayed = "<p>"; // Move variable declaration inside loop
+                var Imageurl = productlist[i].getElementsByTagName("img")[5].getAttribute("src");
+
+                // Image creation
+                var image = document.createElement("img");
+                image.setAttribute("src", Imageurl);
+                imageDisplayed += image.outerHTML + "<br>";
+
+                // Button creation
+                var cartButton = document.createElement("button");
+                cartButton.setAttribute("class","btn btn-primary shop-item-button");
+                cartButton.setAttribute("onclick", "addToCartClicked("+i+")");
+                cartButton.setAttribute("type", "button");
+                cartButton.innerHTML = '<i class="fas fa-shopping-cart"></i>';
+
+                // Product details
+                var title = productlist[i].getElementsByTagName("prodId")[0].textContent;
+                var price = productlist[i].getElementsByTagName("price")[0].textContent;
+                imageDisplayed += "Item # " + title + "<br><br>";
+                imageDisplayed += cartButton.outerHTML;
+                imageDisplayed += "Price: $ " + price + "<br><br>";
+
+                // Append product box
+                var shopItem = document.createElement("div");
+                shopItem.classList.add("box", "shop-item");
+                shopItem.innerHTML = imageDisplayed;
+                document.getElementById("moreItems").appendChild(shopItem);
+            }
+        });
+    </script>
+</body>
+</html>

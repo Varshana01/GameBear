@@ -30,7 +30,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script>
-            var xhttp = new XMLHttpRequest();;
+            var xhttp = new XMLHttpRequest();
             function loadXMLDoc(myXmlFile) {
                 if(window.XMLHttpRequest){
                     xhttp = new XMLHttpRequest;
@@ -43,6 +43,53 @@
                 return xhttp.responseXML;
             }
         </script>
+        <script>
+		$(document).ready(function(){
+            // Function to load product
+            function loadProduct() {
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4 && xhr.status === 200) { //if everything is ok, create a div to
+                        var productDiv = document.createElement('div'); //display msg
+                        productDiv.innerHTML = xhr.responseText;
+                        var productsDiv = document.getElementById('products');
+                        productsDiv.appendChild(productDiv);
+                        
+                    }
+                };
+                xhr.open('GET', 'message.html', true);
+                xhr.send();
+            }
+
+            // Function to load more products
+            function loadMore(){
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4 && xhr.status === 200) { //if everything is ok, create a div to
+                        var productDiv = document.createElement('div'); //display msg
+                        productDiv.innerHTML = xhr.responseText;
+                        var productsDiv = document.getElementById('moreItems');
+                        productsDiv.appendChild(productDiv);
+                        console.log(productDiv);
+                    }
+                };
+                xhr.open('GET', 'moreProducts.html', true);
+                xhr.send();
+            }
+
+            // Event listener for purchase button
+            $(".btn-purchase").click(function(){
+                loadProduct();
+            });
+
+            // Event listener for more button
+            $(".btn-more").click(function(){
+                loadMore();
+            });
+        });
+
+		
+	</script>
         <style>
             body, #storebody{
 			background-image: url("./Images/backgroundimage.png");
@@ -86,7 +133,7 @@
                      </button></form></li>
                  </ul>
                </div>
-             </nav>
+        </nav>
      </header>
     <body>
         <div id="storebody">
@@ -98,8 +145,13 @@
                   <div class="box" class="shop-item" id="shop-item">
                        
                     </div>
+                    <div class="box" class="shop-item" id="shop-item moreItems">
+                       
+                    </div>
                 </div>
             </section>
+            <button class="btn btn-primary btn-more" type="button" style="color: black;
+		    			background-color: #52cbb7;">More Items</button>
             <section class="container content-section">
 		            <h2 class="section-header">CART</h2>
 		            <div class="cart-row">
@@ -113,6 +165,7 @@
 		                <strong class="cart-total-title">Total</strong>
 		                <span class="cart-total-price">$0</span>
 		            </div>
+                    
 		            <button class="btn btn-primary btn-purchase" type="button" style="color: black;
 		    			background-color: #52cbb7;">PURCHASE</button>
 		        </section>
@@ -122,10 +175,8 @@
             var xmlDoc = loadXMLDoc("store.xml");
             var imageDisplayed = "<p>";
             var productlist = xmlDoc.getElementsByTagName("product");
-            
 
-
-            for (i = 0; i < productlist.length; i++) {
+            for (i = 0; i < 4; i++) {
                 var image = document.createElement("img");
                 var src = document.createAttribute("src");
                 var Imageurl = productlist[i].getElementsByTagName("img")[0].getAttribute("src");
@@ -202,7 +253,7 @@
             function addToCartClicked(id) {
                 var title ="";
                 var price="";
-                for (i = 0; i < productlist.length; i++) {
+                for (i = 0; i < 4; i++) {
                     var title = productlist[id].getElementsByTagName("prodId")[0].childNodes[0].nodeValue;
                     var price = productlist[id].getElementsByTagName("price")[0].childNodes[0].nodeValue;
                 }

@@ -31,25 +31,5 @@
         <buttonNo>3</buttonNo>
         
     </product>
-    <product>
-        <img src="./Images/girlShirt.png"></img>
-        <prodId>00105</prodId>
-        <price>78</price>
-        <buttonNo>4</buttonNo>
-        
-    </product>
-
-    <product>
-        <img src="./Images/mask.png"></img>
-        <prodId>00106</prodId>
-        <price>34</price>
-        <buttonNo>5</buttonNo>
-        
-    </product>
-    <product>
-        <img src="./Images/mug.png"></img>
-        <prodId>00107</prodId>
-        <price>9</price>
-        <buttonNo>6</buttonNo>
-    </product>
+    
 </store>

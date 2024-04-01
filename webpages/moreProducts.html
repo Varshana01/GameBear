@@ -6,8 +6,8 @@
     <title>More Products | GamerBear</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/store.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/store.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,10 +26,24 @@
             <!-- Products will be appended here -->
         </div>
     </section>
+    <script>
+        var xhttp = new XMLHttpRequest();
+        function loadXMLDoc(myXmlFile) {
+            if(window.XMLHttpRequest){
+                xhttp = new XMLHttpRequest;
+            }
+            else{
+                xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xhttp.open("GET",myXmlFile,false);
+            xhttp.send();
+            return xhttp.responseXML;
+        }
+    </script>
 
     <script>
         $(document).ready(function(){
-            var xmlDoc = loadXMLDoc("store.xml"); // Define loadXMLDoc function or remove if unnecessary
+            var xmlDoc = loadXMLDoc("../store.xml"); // Define loadXMLDoc function or remove if unnecessary
 
             var productlist = xmlDoc.getElementsByTagName("product");
             for (var i = 4; i < productlist.length; i++) {

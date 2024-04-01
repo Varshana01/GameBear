@@ -57,7 +57,7 @@
                         
                     }
                 };
-                xhr.open('GET', 'message.html', true);
+                xhr.open('GET', './webpages/message.html', true);
                 xhr.send();
             }
 
@@ -69,11 +69,12 @@
                         var productDiv = document.createElement('div'); //display msg
                         productDiv.innerHTML = xhr.responseText;
                         var productsDiv = document.getElementById('moreItems');
-                        productsDiv.appendChild(productDiv);
+                        productsDiv.innerHTML=productDiv;
+                        
                         console.log(productDiv);
                     }
                 };
-                xhr.open('GET', 'moreProducts.html', true);
+                xhr.open('GET', './webpages/moreProducts.html', true);
                 xhr.send();
             }
 

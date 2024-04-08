@@ -7,11 +7,34 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+<!-- font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <meta charset="utf-8">
     <title>GAMEBEAR PRODUCT MANAGEMENT</title>
     <link rel="stylesheet" type="text/css" href="../gamebear/bootstrap/css/bootstrap.css">
+    <style>
+        .page-header {
+            padding-bottom: 9px;
+            margin: 40px 0 20px;
+            border-bottom: 1px solid #1c6e8c;
+            }
+            a,p,h1,h2,h3,h4,h5,h6 {
+                font-family: "Nunito", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 600;
+                font-style: normal;
+            }
+            .btn-primary {
+                color: #fff;
+                background-color: #1ccb85;
+                border-color: #ffffff;
+            }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -44,7 +67,7 @@
                     //load xml file
                     $file = simplexml_load_file('productStock.xml');
  
-                    foreach($file->user as $row){
+                    foreach($file->product as $row){
                         ?>
                         <tr>
                             <td><?php echo $row->prodId; ?></td>
@@ -52,8 +75,8 @@
                             <td><?php echo $row->Price; ?></td>
                             <td><?php echo $row->Quantity; ?></td>
                             <td>
-                                <a href="#edit_<?php echo $row->id; ?>" data-toggle="modal" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-edit"></span> Edit</a>
-                                <a href="#delete_<?php echo $row->id; ?>" data-toggle="modal" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span> Delete</a>
+                                <a href="#edit_<?php echo $row->prodId; ?>" data-toggle="modal" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                                <a href="#delete_<?php echo $row->prodId; ?>" data-toggle="modal" class="btn btn-danger btn-sm"><span class="glyphicon glyphicon-trash"></span> Delete</a>
                             </td>
                             <?php include('edit_delete_modal.php'); ?>
                         </tr>

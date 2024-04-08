@@ -1,16 +1,16 @@
 <?php
 	session_start();
 	if(isset($_POST['edit'])){
-		$users = simplexml_load_file('productStock.xml');
-		foreach($users->user as $user){
-			if($user->prodId == $_POST['prodId']){
-				$user->prodName = $_POST['prodName'];
-				$user->Price = $_POST['Price'];
-				$user->Quantity = $_POST['Quantity'];
+		$products = simplexml_load_file('productStock.xml');
+		foreach($products->product as $product){
+			if($product->prodId == $_POST['prodId']){
+				$product->prodName = $_POST['prodName'];
+				$product->Price = $_POST['Price'];
+				$product->Quantity = $_POST['Quantity'];
 				break;
 			}
 		}
-		file_put_contents('productStock.xml', $users->asXML());
+		file_put_contents('productStock.xml', $products->asXML());
 		$_SESSION['message'] = 'Product updated successfully';
 		header('location: product.php');
 	}

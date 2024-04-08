@@ -1,6 +1,16 @@
 <?xml version="1.0"?>
 <stock>
-  
-  
+  <product>
+    <prodId>00101</prodId>
+    <prodName>Bag</prodName>
+    <Price>12</Price>
+    <Quantity>432</Quantity>
+  </product>
+  <product>
+    <prodId>00102</prodId>
+    <prodName>Boy Hoodie</prodName>
+    <Price>43</Price>
+    <Quantity>233</Quantity>
+  </product>
   
 </stock>

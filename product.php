@@ -23,16 +23,41 @@
             margin: 40px 0 20px;
             border-bottom: 1px solid #1c6e8c;
             }
-            a,p,h1,h2,h3,h4,h5,h6 {
+            a,p,h1,h2,h3,h4,h5,h6,th,td {
                 font-family: "Nunito", sans-serif;
                 font-optical-sizing: auto;
                 font-weight: 600;
                 font-style: normal;
             }
+            th{
+                font-weight: 400;
+            }
+            td{
+                font-weight: 300;
+            }
             .btn-primary {
                 color: #fff;
                 background-color: #1ccb85;
                 border-color: #ffffff;
+            }
+            .btn-success {
+                color: #fff;
+                background-color: #1c6e8c;
+                border-color: #ffffff;
+            }
+            .btn-danger {
+                color: #fff;
+                background-color: #970b06;
+                border-color: #ffffff;
+            }
+            .btn-success {
+                color: #fff;
+                background-color: #157c30;
+                border-color: #ffffff;
+            }
+            html{
+                background: rgb(28,110,140);
+                background: linear-gradient(0deg, rgba(28,110,140,1) 0%, rgba(122,200,229,1) 33%, rgba(255,255,255,1) 100%);
             }
     </style>
 </head>

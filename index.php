@@ -81,18 +81,12 @@
 				<li class="nav-li navPos" ><a href="webpages/login.php" class="navButton"><p>Login</p></a></li>
 				<li class="nav-li navPos"><a href="webpages/reference.php" class="navButton" ><p>Reference</p></a></li>
 				<?php if ($_SESSION['loggedin'] == true) {
-					echo "<li class='nav-li navPos'><a href='feedback.xml' class='navButton' ><p>Feedback</p></a></li>";
-					}
-															
-				?>
-				<li class="nav-li navPos"><form action="webpages/logout.php" method="POST" name="logout" class="logout">
-					<button type="submit" style="background-color: transparent; border: none;">
-						<i class="fas fa-power-off" style="color: #000000;"></i>
-					</button></form>
-					
-				</li>
-				
-				
+					echo"<li class='nav-li navPos'><form action='webpages/logout.php' method='POST' name='logout' class='logout'>
+					<button type='submit' style='background-color: transparent; border: none;'>
+						<i class='fas fa-power-off' style='color: #000000;'></i>
+					</button></form></li>"
+				}													
+				?>		
 			</ul>
 		</div>
 	</nav>

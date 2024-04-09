@@ -107,30 +107,32 @@
     <header>
         <!-- Navbar starts here -->
         <nav>
-               <div class="nav-padding">
-                 <ul class="nav-ul">
-                   <li class="nav-li"><a href="./index.php" class="logoLink"><span><img class="logo" src="./Images/icon4Nav.png" width="60"></span></a></li>
-                   <li class="nav-li userWelcome navPos">
+            <div class="nav-padding">
+                <ul class="nav-ul">
+                    <li class="nav-li"><a href="index.php" class="logoLink"><span><img class="logo" src="../Images/icon4Nav.png" width="60"></span></a></li>
+                    <li class="nav-li userWelcome navPos"><?php if ($_SESSION['loggedin'] == true) {
+                                                                    echo "Welcome, ".($_SESSION['Welcomeuser']);
+                                                                }
+                                                                if($_SESSION['loggedin'] == false){
+                                                                    echo"Welcome.";
+                                                                }
+                                                            ?>
+                    </li>
+                    <li class="nav-li aboutUs navPos"><a href="../webpages/aboutus.php" class="navButton"><p>About us</p></a></li>
+                    <li class="nav-li navPos"><a href="../webpages/store.php" class="navButton"><p>Store</p></a></li>
+                    <li class="nav-li navPos"><a href="../webpages/contact.php" class="navButton"><p>Contact us</p></a></li>
+                    <li class="nav-li navPos" ><a href="../webpages/login.php" class="navButton"><p>Login</p></a></li>
+                    <li class="nav-li navPos"><a href="../webpages/reference.php" class="navButton" ><p>Reference</p></a></li>
                     <?php if ($_SESSION['loggedin'] == true) {
-                            echo "Welcome, ".($_SESSION['Welcomeuser']);
-                        }
-                        if($_SESSION['loggedin'] == false){
-                            echo"Welcome.";
-                        }
-                    ?>
-                   </li>
-                   <li class="nav-li aboutUs navPos"><a href="../webpages/aboutus.php" class="navButton"><p>About us</p></a></li>
-                   <li class="nav-li navPos"><a href="../webpages/store.php" class="navButton"><p>Store</p></a></li>
-                   <li class="nav-li navPos"><a href="../webpages/contact.php" class="navButton"><p>Contact us</p></a></li>
-                   <li class="nav-li navPos" ><a href="../webpages/login.php" class="navButton"><p>Login</p></a></li>
-                   <li class="nav-li navPos"><a href="../webpages/reference.php" class="navButton" ><p>Reference</p></a></li>
-                   <li class="nav-li navPos"><form action="../webpages/logout.php" method="POST" name="logout" class="logout">
-                     <button type="submit" style="background-color: transparent; border: none;">
-                       <i class="fas fa-power-off" style="color: #000000;"></i>
-                     </button></form></li>
-                 </ul>
-               </div>
-        </nav>
+                        echo"<li class='nav-li navPos'><form action='../webpages/logout.php' method='POST' name='logout' class='logout'>
+                        <button type='submit' style='background-color: transparent; border: none;'>
+                            <i class='fas fa-power-off' style='color: #000000;'></i>
+                        </button></form></li>"
+                    }													
+                    ?>		
+                </ul>
+            </div>
+	    </nav>
      </header>
     <body>
         <div id="storebody">

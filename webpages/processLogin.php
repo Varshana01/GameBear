@@ -14,7 +14,7 @@
             if($result==1){
                 $_SESSION['Welcomeuser']=$uname; //storing username in a session
                 
-                header("Location: http://127.0.0.1:8080/new-gamebear/Gamebear/index.php"); //redirecting to index if all ok
+                header("Location: http://127.0.0.1:8080/Gamebear/index.php"); //redirecting to index if all ok
                 die();
             }
             else{

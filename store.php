@@ -109,7 +109,7 @@
         <nav>
             <div class="nav-padding">
                 <ul class="nav-ul">
-                    <li class="nav-li"><a href="index.php" class="logoLink"><span><img class="logo" src="../Images/icon4Nav.png" width="60"></span></a></li>
+                    <li class="nav-li"><a href="index.php" class="logoLink"><span><img class="logo" src="./Images/icon4Nav.png" width="60"></span></a></li>
                     <li class="nav-li userWelcome navPos"><?php if ($_SESSION['loggedin'] == true) {
                                                                     echo "Welcome, ".($_SESSION['Welcomeuser']);
                                                                 }
@@ -127,7 +127,7 @@
                         echo"<li class='nav-li navPos'><form action='../webpages/logout.php' method='POST' name='logout' class='logout'>
                         <button type='submit' style='background-color: transparent; border: none;'>
                             <i class='fas fa-power-off' style='color: #000000;'></i>
-                        </button></form></li>"
+                        </button></form></li>";
                     }													
                     ?>		
                 </ul>
@@ -138,15 +138,13 @@
         <div id="storebody">
             <!-- products section starts  -->
     
-            <section id="products">
-               <div class="box-container" class="shop-items">
+            <section id="products" style="display: flex; ">
+               <div class="box-container">
     
-                  <div class="box" class="shop-item" id="shop-item">
+                  <div class="box shop-item" id="shop-item">
                        
                     </div>
-                    <div class="box" class="shop-item" id="shop-item moreItems">
-                       
-                    </div>
+                    
                 </div>
             </section>
             
@@ -171,44 +169,54 @@
 		        </section>
 
 		<!-- cart section ends -->
-        <script>
-            var xmlDoc = loadXMLDoc("store.xml");
-            var imageDisplayed = "<p>";
-            var productlist = xmlDoc.getElementsByTagName("product");
 
-            for (i = 0; i < productlist.length; i++) {
-                var image = document.createElement("img");
-                var src = document.createAttribute("src");
-                var Imageurl = productlist[i].getElementsByTagName("img")[0].getAttribute("src");
-                
-                image.setAttribute("src", Imageurl);
-                imageDisplayed += image.outerHTML + "<br>";
+ <script>
+ var xmlDoc = loadXMLDoc("store.xml");
+var productlist = xmlDoc.getElementsByTagName("product");
+var productsDiv = document.getElementById('products');
 
-                // button creation
-                var cartButton = document.createElement("button");
-                var cartClass = document.createAttribute("class");
-                var onclickFunc = document.createAttribute("onclick");
-                var buttType = document.createAttribute("type");
-                var aLink = document.createElement("a");
-                var linkClass = document.createAttribute("class");
-                cartButton.setAttribute("class","btn btn-primary shop-item-button" );
-                cartButton.setAttribute("onclick", "addToCartClicked("+i+")");
-                cartButton.setAttribute("type", "button");
-                aLink.setAttribute("class", "fas fa-shopping-cart");
-                cartButton.append(aLink);
-                
-                var title = productlist[i].getElementsByTagName("prodId")[0].childNodes[0].nodeValue;
-                imageDisplayed += "Item # " + title + "<br><br>";
-                imageDisplayed += cartButton.outerHTML;
+for (var i = 0; i < productlist.length; i++) {
+    var product = productlist[i];
+    
+    // Create product container
+    var productContainer = document.createElement('div');
+    productContainer.className = 'shop-item';
+    
+    // Create image element
+    var image = document.createElement("img");
+    var src = product.getElementsByTagName("img")[0].getAttribute("src");
+    image.setAttribute("src", src);
+    image.style.height = '250px';
+    image.style.width = '250px';
+    image.style.objectFit = 'cover';
+    productContainer.appendChild(image);
 
-                var price = productlist[i].getElementsByTagName("price")[0].childNodes[0].nodeValue;
-                imageDisplayed += "Price: $ " + price + "<br><br>";
-                
-                var shopItem = document.getElementById("shop-item");
-                shopItem.innerHTML = imageDisplayed;
-            }
-            
-            function ready() {
+    // Create title (Product ID)
+    var title = document.createElement('p');
+    title.textContent = "Item # " + product.getElementsByTagName("prodId")[0].textContent;
+    productContainer.appendChild(title);
+
+    // Create price
+    var price = document.createElement('p');
+    price.textContent = "Price: $" + product.getElementsByTagName("price")[0].textContent;
+    productContainer.appendChild(price);
+
+    // Create cart button
+    var cartButton = document.createElement("button");
+    cartButton.className = "btn btn-primary shop-item-button";
+    cartButton.setAttribute("onclick", "addToCartClicked(" + i + ")");
+    var cartIcon = document.createElement("i");
+    cartIcon.className = "fas fa-shopping-cart";
+    cartButton.appendChild(cartIcon);
+    productContainer.appendChild(cartButton);
+
+    // Append product container to productsDiv
+    productsDiv.appendChild(productContainer);
+}
+
+
+ function ready() {
+
 //--------------------------------------------CART JS-------------------------------------------------------
                 var removeCartItemButtons = document.getElementsByClassName("btn-danger");
                 for (var i = 0; i < removeCartItemButtons.length; i++) {

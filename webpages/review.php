@@ -11,27 +11,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Register | GamerBear</title>
-    <!-- tab img -->
-	<link rel = "icon" href ="..\Images\icon4Nav.png" type = "image/x-icon">
     <!-- css -->
 	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/review.css">
+
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
-	<!-- Icons -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-	<style type="text/css">
-		body{
-			background-image: url("../Images/backgroundimage.png");
-  			height: 100vh;
-		}
-		#Register:hover,a:hover {
-  			color: #42a87e;
-  		}
-		  .nav-li a {
+
+    <meta charset="UTF-8">
+    <title>Review | GamerBear</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="add_review.js"></script>
+    <style>
+        .nav-li a {
 			display: block;
 			color: white;
 			text-align: center;
@@ -39,14 +33,17 @@
 			text-decoration: none;
 
 			}
-			.aboutUs {
+            .aboutUs {
     margin-left: 45vw;
 }
-	</style>
+h2{
+	margin-left: 45vw;
+}
+        </style>
 </head>
-<body id="registerbody">
-   <!-- Navbar starts here -->
-   <nav>
+<header>
+    <!-- Navbar starts here -->
+    <nav>
 		<div class="nav-padding">
 			<ul class="nav-ul">
 				<li class="nav-li"><a href="../index.php" class="logoLink"><span><img class="logo" src="../Images/icon4Nav.png" width="60"></span></a></li>
@@ -79,38 +76,30 @@
 			</ul>
 		</div>
 	</nav>
-
-	</div> 
-	<div class="container4">
-	  <form action="processUser.php" method="POST" name="register"> <!--Form submitted to processUser.php for processing-->
-	   	<p class="welcome">Register with us!</p>
-			<div class="inputBox">
-				<span class="fa-regular fa-user"></span>
-					<input type="text" placeholder="Username" class="inputFrm" name="uname_reg" required /><br>
-				</div>
-				<div class="inputBox">
-					<span class="fa-regular fa-envelope"></span>
-					<input type="email" placeholder="Email" class="inputFrm" name="email_reg" required><br>
-				</div>
-				<div class="inputBox">
-					<span class="fa-solid fa-lock"></span>
-					<input type="password" placeholder="Password" class="inputFrm" name="pass_reg" required><br>
-				</div>
-				<div class="inputBox">
-					<select class="options inputFrm" name="age_reg" required >
-						<option>	Select age range: </option>
-						<option>	10 years -16 years </option>
-						<option>	17 years -25 years </option>
-						<option>	26 years -35 years </option>
-						<option>	36 years -45 years </option>
-						<option>	Above 40 years </option>
-					</select>
-				</div>
-				<br>
-				<input type="submit" id="Register" value="Register"><br>
-			</div>
-	  </form>
-	</div>
-
+ </header>
+<body>
+    <h2>Add Review</h2>
+    <form id="addReviewForm">
+        <div>
+			
+            <label for="productId">Product ID:</label>
+            <input type="text" id="productId" name="productId" required>
+        </div>
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div>
+            <label for="rating">Rating (1-5):</label>
+            <input type="number" id="rating" name="rating" min="1" max="5" required>
+        </div>
+        <div>
+            <label for="comment">Comment:</label>
+            <textarea id="comment" name="comment" rows="4" required></textarea>
+        </div>
+        <div>
+            <button type="submit">Submit Review</button>
+        </div>
+    </form>
 </body>
 </html>

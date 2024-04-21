@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reviews>
+    <product id="00101">
+        <review>
+            <username>JohnDoe</username>
+            <rating>4</rating>
+            <comment>Nice bag, good quality!</comment>
+        </review>
+    </product>
+    <product id="00102">
+        <review>
+            <username>JohnSmith</username>
+            <rating>3</rating>
+            <comment>Good hoodie but a bit tight.</comment>
+        </review>
+    </product>
+    <!-- Add more product reviews and ratings here -->
+    <product id="00105">
+        <review>
+            <username>HemNun</username>
+            <rating>3</rating>
+            <comment>Overall good but not the good size</comment>
+        </review>
+    </product>
+<product id="00107"><review><username>Zayn</username><rating>4</rating><comment>Really love it</comment></review></product><product id="00104"><review><username>Sahil</username><rating>2</rating><comment>Delivery took too long and size not good. :(</comment></review></product></reviews>

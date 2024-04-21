@@ -31,7 +31,7 @@
             display: flex;
             flex-direction: row;
 			font-size: 30px;
-			margin: 30px 15px 15px 15px;
+			margin: 15px 15px 15px 15px;
 			padding: 3px;
 			
 		}
@@ -59,6 +59,14 @@
 			-webkit-text-fill-color: transparent; 
 
 		}
+		.nav-li a {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 15px 15px 15px;
+			text-decoration: none;
+
+			}
 	</style>
 </head>
 <body>
@@ -78,15 +86,21 @@
 				<li class="nav-li aboutUs navPos"><a href="webpages/aboutus.php" class="navButton"><p>About us</p></a></li>
 				<li class="nav-li navPos"><a href="webpages/store.php" class="navButton"><p>Store</p></a></li>
 				<li class="nav-li navPos"><a href="webpages/contact.php" class="navButton"><p>Contact us</p></a></li>
-				<li class="nav-li navPos" ><a href="webpages/login.php" class="navButton"><p>Login</p></a></li>
-				<li class="nav-li navPos"><a href="webpages/reference.php" class="navButton" ><p>Reference</p></a></li>
-				<?php if ($_SESSION['loggedin'] == true) {
-					echo"<li class='nav-li navPos'><form action='webpages/logout.php' method='POST' name='logout' class='logout'>
-					<button type='submit' style='background-color: transparent; border: none;'>
-						<i class='fas fa-power-off' style='color: #000000;'></i>
-					</button></form></li>";
-				}													
-				?>		
+				<li class="nav-li userWelcome navPos"><?php if ($_SESSION['loggedin'] == true) {
+																echo "<li class='nav-li navPos'><form action='webpages/logout.php' method='POST' name='logout' class='logout'>
+																<button type='submit' style='background-color: transparent; border: none;'>
+																	<i class='fas fa-power-off' style='color: #000000;'></i>
+																</button></form></li>
+																<li class='nav-li navPos' ><a href='webpages/view_reviews.php' class='navButton'><p>Reviews</p></a></li>";
+															
+															}
+															if($_SESSION['loggedin'] == false){
+																echo"<li class='nav-li navPos' ><a href='webpages/login.php' class='navButton'><p>Login</p></a></li>";
+															}
+														?>
+				</li>
+				
+							
 			</ul>
 		</div>
 	</nav>

@@ -167,3 +167,12 @@
     margin: 40px auto 80px auto;
     font-size: 1.75em;
 }
+
+.nav-li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 15px 15px 15px;
+    text-decoration: none;
+  
+  }

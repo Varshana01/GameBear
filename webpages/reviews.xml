@@ -22,4 +22,18 @@
             <comment>Overall good but not the good size</comment>
         </review>
     </product>
-<product id="00107"><review><username>Zayn</username><rating>4</rating><comment>Really love it</comment></review></product><product id="00104"><review><username>Sahil</username><rating>2</rating><comment>Delivery took too long and size not good. :(</comment></review></product></reviews>
+    <product id="00107">
+        <review>
+            <username>Zayn</username>
+            <rating>4</rating>
+            <comment>Really love it</comment>
+        </review>
+    </product>
+    <product id="00104">
+        <review>
+            <username>Sahil</username>
+            <rating>2</rating>
+            <comment>Delivery took too long and size not good. :(</comment>
+        </review>
+    </product>
+</reviews>

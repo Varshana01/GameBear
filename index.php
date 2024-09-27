@@ -85,7 +85,7 @@
 				</li>
 				<li class="nav-li aboutUs navPos"><a href="webpages/aboutus.php" class="navButton"><p>About us</p></a></li>
 				<li class="nav-li navPos"><a href="webpages/store.php" class="navButton"><p>Store</p></a></li>
-				<li class="nav-li navPos"><a href="webpages/contact.php" class="navButton"><p>Contact us</p></a></li>
+				<li class="nav-li navPos"><a href="webpages/contactClient.php" class="navButton"><p>Contact us</p></a></li>
 				<li class="nav-li userWelcome navPos"><?php if ($_SESSION['loggedin'] == true) {
 																echo "<li class='nav-li navPos'><form action='webpages/logout.php' method='POST' name='logout' class='logout'>
 																<button type='submit' style='background-color: transparent; border: none;'>

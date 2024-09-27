@@ -36,4 +36,6 @@
             <comment>Delivery took too long and size not good. :(</comment>
         </review>
     </product>
-</reviews>
+<product id="00102"><review><username>Sahil</username><rating>4</rating><comment>Came in the right size</comment></review></product>
+<product id="00104"><review><username>Varshana</username><rating>3</rating><comment>Wrong size</comment></review></product>
+<product id="00105"><review><username>Varshana</username><rating>3</rating><comment>nice</comment></review></product></reviews>

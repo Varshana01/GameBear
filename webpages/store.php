@@ -141,9 +141,7 @@
 		                <strong class="cart-total-title">Total</strong>
 		                <span class="cart-total-price">$0</span>
 		            </div>
-                    
-		            <button class="btn btn-primary btn-purchase" type="button" style="color: black;
-		    			background-color: #52cbb7;">PURCHASE</button>
+                    <button class="btn btn-primary btn-purchase" id="paypal-button" type="button" style="color: black; background-color: #52cbb7;">PURCHASE</button>
 		        </section>
 
 		<!-- cart section ends -->
@@ -217,12 +215,35 @@
             }
 
             function purchaseClicked() {
-                var cartItems = document.getElementsByClassName("cart-items")[0];
-                while (cartItems.hasChildNodes()) {
-                    cartItems.removeChild(cartItems.firstChild);
-                }
-                updateCartTotal();
-            }
+                $(".btn-purchase").click(function() {
+                    // Get the total price from the cart
+                    var totalAmount = document.getElementsByClassName('cart-total-price')[0].innerText.replace('$', '');
+
+                    // Call the PHP function to process PayPal payment
+                    $.ajax({
+                        url: 'paymentGatewayServer.php',
+                        type: 'POST',
+                        data: {
+                            amount: totalAmount
+                        },
+                        dataType: 'json', // Expect JSON response
+                        success: function(response) {
+                            if (response.status === 'success') {
+                                window.location.href = response.approval_url;  // Redirect to PayPal for payment approval
+                            } else {
+                                alert('Error: ' + response.message);
+                            }
+                        },
+                        error: function(xhr, status, error) {
+                            // Log or display the raw response text for debugging
+                            console.error('AJAX Error: ', xhr.responseText);
+                            alert('An error occurred while processing the payment.');
+                        }
+                    });
+                });
+            };
+
+            
 
             function removeCartItem(event) {
                 var buttonClicked = event.target;

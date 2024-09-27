@@ -9,7 +9,62 @@ h1,h2,h3,h4,h5,h6,a,ul,li,p,label{
   padding: 0;
   box-sizing: border-box;
 }
+/*Navbar*/
+nav{
+  margin: 0;
+  padding: 0;
+  position: sticky;
+  top: 0;
+}
+.nav-ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#52cbb7;
+  position: sticky;
+  top: 0;
 
+  
+}
+
+.nav-li {
+  float: left;
+}
+
+.nav-li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 15px 15px 15px;
+  text-decoration: none;
+
+}
+
+.logo{
+  float: left;
+  display: inline-block;
+}
+.navPos {
+  padding: 2px 5px 3px 1px;
+}
+
+.aboutUs {
+  margin-left: 45vw;
+}
+
+.nav-li .navButton:hover {
+  background-color: #92F2E3;
+}
+
+.userWelcome{
+  align-self: center;
+  padding: 34px 0;
+}
+.logout{
+  padding: 3px 0;
+  height: 20px;
+}
 body{
   width: 100%;
   place-items: center;

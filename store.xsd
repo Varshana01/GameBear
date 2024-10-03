@@ -14,6 +14,7 @@
                             </xs:element>
                             <xs:element name="prodId" type="xs:string"/>
                             <xs:element name="price" type="xs:decimal"/>
+                            <xs:element name="name" type="xs:string"/>
                             <xs:element name="buttonNo" type="xs:integer"/>
                         </xs:sequence>
                     </xs:complexType>
